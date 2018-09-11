@@ -23,9 +23,8 @@ class TotalResultViewController: UIViewController {
     @IBOutlet weak var totalLabel: UILabel!
     @IBOutlet weak var exchangeView: UIView!
     
-    @IBOutlet weak var unit: UILabel!
+
     
-    @IBOutlet weak var changeTextField: UITextField!
     @IBOutlet weak var changeResult: UILabel!
     var caculate = CaculateTheSavingMoney()
     var total = Double()
@@ -49,29 +48,13 @@ class TotalResultViewController: UIViewController {
         lastYearSavingMoneyLabel.text = Tools.changeToCurrency(moneyStr: (String((savingMoneyPerYear.last!.money*100).rounded()/100)))
         total = ((bankMoneyPerYear.last! + savingMoneyPerYear.last!.money) * 100).rounded()/100
         totalLabel.text = Tools.changeToCurrency(moneyStr:String(total) )! + " " + String(caculate.currencyUnit)
-       unit.text = caculate.currencyUnit
-        
+
        
     }
 
     
     @IBAction func conver(_ sender: UIButton) {
-        if let changetext = changeTextField.text{
-            let changeDouble: Double? = Double(changetext)
-            if let changeDouble = changeDouble {
-                change = changeDouble
-            }else {
-                //nhap sai dinh dangg
-                
-                AlertController.showAlert(inController: self, tilte: "Wrong input!", message: "You input wrong type")
-            }
-            
-        }else {
-            //hien ra thong bao chua nhap
-             AlertController.showAlert(inController: self, tilte: "Error!", message: "Please filling the text field")
-            
-        }
-        changeResult.text = String(total*change)
+        AlertController.showTextField(inController: self, tilte: "", message: "")
     }
     @IBAction func backToViewController(_ sender: UIButton) {
       //  self.performSegue(withIdentifier: "backInTotalTab", sender: nil)

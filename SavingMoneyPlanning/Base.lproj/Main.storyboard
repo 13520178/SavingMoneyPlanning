@@ -277,6 +277,17 @@
                                     <constraint firstAttribute="bottom" secondItem="Tev-wl-cYP" secondAttribute="bottom" constant="10" id="yrQ-Uy-DcZ"/>
                                 </constraints>
                             </view>
+                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="xlL-CX-QTM">
+                                <rect key="frame" x="20" y="577" width="335" height="36"/>
+                                <color key="backgroundColor" red="0.92143100499999997" green="0.92145264149999995" blue="0.92144101860000005" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                <fontDescription key="fontDescription" type="system" pointSize="20"/>
+                                <state key="normal" title="Recent record">
+                                    <color key="titleColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                </state>
+                                <connections>
+                                    <action selector="recentRecord:" destination="HUv-er-1EF" eventType="touchUpInside" id="JiE-w5-qgA"/>
+                                </connections>
+                            </button>
                         </subviews>
                         <color key="backgroundColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         <constraints>
@@ -286,11 +297,14 @@
                             <constraint firstItem="Tev-wl-cYP" firstAttribute="top" secondItem="mtW-da-nVv" secondAttribute="bottom" constant="25.5" id="LQL-hk-A8d"/>
                             <constraint firstItem="mtW-da-nVv" firstAttribute="top" secondItem="aho-sJ-dhO" secondAttribute="bottom" constant="10" id="Qk2-Wq-whJ"/>
                             <constraint firstItem="mtW-da-nVv" firstAttribute="leading" secondItem="x2C-86-jv0" secondAttribute="leading" constant="16" id="Te3-pA-CbK"/>
+                            <constraint firstItem="x2C-86-jv0" firstAttribute="trailing" secondItem="xlL-CX-QTM" secondAttribute="trailing" constant="20" id="U6V-Wa-JJJ"/>
                             <constraint firstItem="x2C-86-jv0" firstAttribute="trailing" secondItem="Rt4-Bb-oa3" secondAttribute="trailing" constant="20" id="YLH-uP-LMX"/>
+                            <constraint firstItem="Rt4-Bb-oa3" firstAttribute="top" secondItem="xlL-CX-QTM" secondAttribute="bottom" constant="8" id="bW2-Yk-j48"/>
                             <constraint firstItem="x2C-86-jv0" firstAttribute="bottom" secondItem="Rt4-Bb-oa3" secondAttribute="bottom" constant="10" id="f5I-yc-aOP"/>
                             <constraint firstItem="aho-sJ-dhO" firstAttribute="top" secondItem="x2C-86-jv0" secondAttribute="top" constant="40" id="iHW-0z-Cea"/>
                             <constraint firstItem="XPA-Bb-a3n" firstAttribute="leading" secondItem="x2C-86-jv0" secondAttribute="leading" constant="16" id="igO-IQ-14N"/>
                             <constraint firstItem="x2C-86-jv0" firstAttribute="trailing" secondItem="mtW-da-nVv" secondAttribute="trailing" constant="16" id="pmb-m1-OOb"/>
+                            <constraint firstItem="xlL-CX-QTM" firstAttribute="leading" secondItem="x2C-86-jv0" secondAttribute="leading" constant="20" id="rMP-cz-Dja"/>
                             <constraint firstItem="aho-sJ-dhO" firstAttribute="leading" secondItem="x2C-86-jv0" secondAttribute="leading" constant="16" id="yfe-RB-kMf"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="x2C-86-jv0"/>
@@ -306,12 +320,13 @@
                         <outlet property="firstYearEarningTextField" destination="FLq-Ji-3RA" id="fTj-Rp-939"/>
                         <outlet property="percentOrNumSegment" destination="fXf-Kk-8Fa" id="QkS-eJ-Mps"/>
                         <outlet property="percentageForSavingTextField" destination="Dde-Mc-EwY" id="r9R-2p-Yh7"/>
+                        <outlet property="recentButton" destination="xlL-CX-QTM" id="BPS-UK-PKz"/>
                         <outlet property="yearsTextField" destination="VwK-xS-MI5" id="1tj-CS-tgo"/>
                     </connections>
                 </viewController>
                 <placeholder placeholderIdentifier="IBFirstResponder" id="ezF-eZ-9KB" userLabel="First Responder" sceneMemberID="firstResponder"/>
             </objects>
-            <point key="canvasLocation" x="-652" y="97"/>
+            <point key="canvasLocation" x="-652" y="96.7016491754123"/>
         </scene>
         <!--Total Result View Controller-->
         <scene sceneID="QrS-19-0NO">
@@ -553,60 +568,30 @@
                                 </constraints>
                             </view>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="rWz-bv-eS6">
-                                <rect key="frame" x="15" y="497" width="345" height="120.5"/>
+                                <rect key="frame" x="15" y="497" width="345" height="101.5"/>
                                 <subviews>
                                     <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="4Av-tz-9ik">
-                                        <rect key="frame" x="5" y="16" width="335" height="88.5"/>
+                                        <rect key="frame" x="5" y="16" width="335" height="69.5"/>
                                         <subviews>
                                             <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" translatesAutoresizingMaskIntoConstraints="NO" id="QXa-yP-2xf">
-                                                <rect key="frame" x="0.0" y="0.0" width="308" height="50.5"/>
+                                                <rect key="frame" x="0.0" y="0.0" width="72" height="24.5"/>
                                                 <subviews>
-                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exchange rate" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWt-zk-7C1">
-                                                        <rect key="frame" x="0.0" y="0.0" width="109" height="20.5"/>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Exchange" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="LWt-zk-7C1">
+                                                        <rect key="frame" x="0.0" y="0.0" width="72" height="24.5"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                         <nil key="textColor"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
-                                                    <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="0ph-66-Bfg">
-                                                        <rect key="frame" x="0.0" y="20.5" width="308" height="30"/>
-                                                        <subviews>
-                                                            <stackView opaque="NO" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Tl0-mm-MVE">
-                                                                <rect key="frame" x="0.0" y="0.0" width="140" height="30"/>
-                                                                <subviews>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="Label" textAlignment="right" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="ygG-H4-Nau">
-                                                                        <rect key="frame" x="0.0" y="0.0" width="37.5" height="30"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                        <color key="textColor" red="0.37557166814804077" green="0.80224770307540894" blue="0.49458879232406616" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="/New Currency" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Qg8-Eo-jD1">
-                                                                        <rect key="frame" x="37.5" y="0.0" width="102.5" height="30"/>
-                                                                        <fontDescription key="fontDescription" type="system" pointSize="15"/>
-                                                                        <color key="textColor" red="0.37557166814804077" green="0.80224770307540894" blue="0.49458879232406616" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                                        <nil key="highlightedColor"/>
-                                                                    </label>
-                                                                </subviews>
-                                                            </stackView>
-                                                            <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="Ln9-7A-M5D">
-                                                                <rect key="frame" x="148" y="0.0" width="160" height="30"/>
-                                                                <constraints>
-                                                                    <constraint firstAttribute="width" constant="160" id="U8H-fA-NBN"/>
-                                                                </constraints>
-                                                                <nil key="textColor"/>
-                                                                <fontDescription key="fontDescription" type="system" pointSize="14"/>
-                                                                <textInputTraits key="textInputTraits"/>
-                                                            </textField>
-                                                        </subviews>
-                                                    </stackView>
                                                 </subviews>
                                             </stackView>
                                             <stackView opaque="NO" contentMode="scaleToFill" spacingType="standard" translatesAutoresizingMaskIntoConstraints="NO" id="M2j-R1-dan">
-                                                <rect key="frame" x="0.0" y="58.5" width="333" height="30"/>
+                                                <rect key="frame" x="0.0" y="32.5" width="330" height="37"/>
                                                 <subviews>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sbg-ql-yFf">
-                                                        <rect key="frame" x="0.0" y="0.0" width="55" height="30"/>
+                                                        <rect key="frame" x="0.0" y="0.0" width="72" height="37"/>
                                                         <color key="backgroundColor" red="0.83741801979999997" green="0.83743780850000005" blue="0.83742713930000001" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                                        <state key="normal" title="Convert">
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
+                                                        <state key="normal" title="Exchange">
                                                             <color key="titleColor" red="0.22220218181610107" green="0.52088057994842529" blue="0.45698392391204834" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         </state>
                                                         <connections>
@@ -615,12 +600,12 @@
                                                         </connections>
                                                     </button>
                                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text=" " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="biX-GL-pZG">
-                                                        <rect key="frame" x="63" y="0.0" width="270" height="30"/>
+                                                        <rect key="frame" x="80" y="0.0" width="250" height="37"/>
                                                         <color key="backgroundColor" red="0.0" green="0.56904578210000001" blue="0.57461684940000002" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <constraints>
-                                                            <constraint firstAttribute="width" constant="270" id="4NR-2V-qex"/>
+                                                            <constraint firstAttribute="width" constant="250" id="4NR-2V-qex"/>
                                                         </constraints>
-                                                        <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                                        <fontDescription key="fontDescription" name="ChalkboardSE-Regular" family="Chalkboard SE" pointSize="17"/>
                                                         <color key="textColor" red="0.99999600649999998" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                         <nil key="highlightedColor"/>
                                                     </label>
@@ -664,7 +649,6 @@
                         <outlet property="annualIncomeIncreasesLabel" destination="DSy-5I-jaV" id="3b2-yW-Y5u"/>
                         <outlet property="bankInterstRateLabel" destination="8fc-hF-JvT" id="B2J-lA-PmN"/>
                         <outlet property="changeResult" destination="biX-GL-pZG" id="fX9-nF-wpw"/>
-                        <outlet property="changeTextField" destination="Ln9-7A-M5D" id="QsZ-wR-KrC"/>
                         <outlet property="currencyUnitLabel" destination="t7D-9G-k2C" id="RHu-bS-yyg"/>
                         <outlet property="exchangeView" destination="rWz-bv-eS6" id="xjP-Fk-A1T"/>
                         <outlet property="firstYearEarnings" destination="D0r-tH-w8D" id="EnZ-cU-Ri6"/>
@@ -672,7 +656,6 @@
                         <outlet property="percentOfIncomeForSavingLabel" destination="OWb-oV-Qrc" id="7fU-iw-1F9"/>
                         <outlet property="totalInBankLabel" destination="T3U-sF-DMp" id="vyW-l0-Txh"/>
                         <outlet property="totalLabel" destination="HjJ-6B-eW2" id="wzD-lC-fdY"/>
-                        <outlet property="unit" destination="ygG-H4-Nau" id="XGg-rd-Gjc"/>
                         <outlet property="yearsLabel" destination="Z2T-tS-R9w" id="LWc-cI-bZn"/>
                     </connections>
                 </viewController>
@@ -863,6 +846,7 @@
         <image name="calculator (1)" width="24" height="24"/>
     </resources>
     <inferredMetricsTieBreakers>
+        <segue reference="QR8-sJ-fhG"/>
         <segue reference="RK6-qq-Jjp"/>
     </inferredMetricsTieBreakers>
 </document>

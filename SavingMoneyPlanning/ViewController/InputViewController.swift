@@ -22,6 +22,7 @@ class InputViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var bankInterestTextField: UITextField!
     @IBOutlet weak var AmountOfMoneyToBeAchieve: UITextField!
     
+    @IBOutlet weak var recentButton: UIButton!
     @IBOutlet weak var avergaLabel: UILabel!
     //Declare variable
     var caculate = CaculateTheSavingMoney()
@@ -31,6 +32,7 @@ class InputViewController: UIViewController, UITextFieldDelegate {
     var backFromTotal = false
     var amountAvalable = Int()
     var firstEarning = Int()
+    var forReloadData = CaculateTheSavingMoney()
     
     func setUpUnpredictableToKeyboard() {
         currencyUnitTextField.autocorrectionType = .no
@@ -59,6 +61,8 @@ class InputViewController: UIViewController, UITextFieldDelegate {
             percentageForSavingTextField.text = String(caculate.moneySavingPerYear.percentOfIncomeForSaving)
             yearsTextField.text = String(caculate.moneySavingPerYear.years)
             bankInterestTextField.text = String(caculate.interest)
+            firstEarning = Int(caculate.moneySavingPerYear.firstYearEarning)
+            amountAvalable = Int(caculate.amountAvailable)
         }
         caculate = CaculateTheSavingMoney()
         let fetchRequest: NSFetchRequest<Average> = Average.fetchRequest()
@@ -71,6 +75,15 @@ class InputViewController: UIViewController, UITextFieldDelegate {
                 for aver in self.averages {
                     averageNumbers.append(aver.number)
                 }
+                forReloadData.moneySavingPerYear.firstYearEarning = self.averages.last?.firstYearEarning ?? 0
+                forReloadData.amountAvailable = self.averages.last?.amountAvailable ?? 0
+                forReloadData.currencyUnit = self.averages.last?.currencyUnit ?? ""
+                forReloadData.interest = self.averages.last?.bankInterest ?? 0
+                forReloadData.moneySavingPerYear.years = Int(self.averages.last?.year ?? 0)
+                forReloadData.moneySavingPerYear.percentOfIncomeForSaving = Double(self.averages.last?.percentForSaving ?? 0)
+                forReloadData.moneySavingPerYear.isPercent = self.averages.last?.percentOrNumber ?? true
+                forReloadData.moneySavingPerYear.annualIncomeIcreases = self.averages.last?.anualIcrease ?? 0
+               
                 let sumArray = averageNumbers.reduce(0, +)
                 let avgArrayValue = (sumArray / Double(averageNumbers.count)*100).rounded()/100
                  avergaLabel.text = "Average percentage savings : \(avgArrayValue)%"
@@ -132,7 +145,7 @@ class InputViewController: UIViewController, UITextFieldDelegate {
             let interest = bankInterestTextField.text,
             interest != ""
         else {
-            AlertController.showAlert(inController: self, tilte: "Input Error", message: "Pleas filling out all required fields")
+            AlertController.showAlert(inController: self, tilte: "Input Error", message: "Please filling out all required fields")
             return
         }
         
@@ -180,6 +193,15 @@ class InputViewController: UIViewController, UITextFieldDelegate {
             isPerformSegue = true
             let average = Average(context: PersitenceService.context)
             average.number = percentOfIncomeForSavingDouble
+            average.currencyUnit = currencyUnitValue
+            average.anualIcrease = annualIncomeIcreasesDbouble
+            average.amountAvailable = amountAvailableDouble
+            average.bankInterest = interestDouble
+            average.firstYearEarning = firstYearEarningDouble
+            average.percentForSaving = percentOfIncomeForSavingDouble
+            average.percentOrNumber = caculate.moneySavingPerYear.isPercent
+            average.year = Int16(yearsInt)
+            
             PersitenceService.saveContext()
             averages.append(average)
         } else {
@@ -187,6 +209,23 @@ class InputViewController: UIViewController, UITextFieldDelegate {
         }
       
     }
+    
+    @IBAction func recentRecord(_ sender: UIButton) {
+        if self.averages.count != 0 {
+            currencyUnitTextField.text = averages.last!.currencyUnit
+            amountAvailableTextField.text = String(averages.last!.amountAvailable)
+            firstYearEarningTextField.text = String(averages.last!.firstYearEarning)
+            annualIncomeTextField.text = String(averages.last!.anualIcrease)
+            percentageForSavingTextField.text = String(averages.last!.percentForSaving)
+            yearsTextField.text = String(averages.last!.year)
+            bankInterestTextField.text = String(averages.last!.bankInterest)
+            firstEarning = Int(averages.last!.firstYearEarning)
+            amountAvalable = Int(averages.last!.amountAvailable)
+        }else {
+            recentButton.isEnabled = false
+        }
+    }
+    
     
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if isPerformSegue == true {
