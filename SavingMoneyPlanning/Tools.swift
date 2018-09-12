@@ -42,7 +42,7 @@ class Tools {
         let number:Double? = Double(moneyStr)
         if let number = number {
             let formatter = NumberFormatter()
-            formatter.numberStyle = NumberFormatter.Style.currency
+            formatter.numberStyle = NumberFormatter.Style.decimal
             return formatter.string(from: NSNumber(value: number))
         }
       return ""

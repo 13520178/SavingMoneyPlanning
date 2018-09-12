@@ -30,8 +30,8 @@ class InputViewController: UIViewController, UITextFieldDelegate {
     var averages = [Average]()
     var averageNumber = Double()
     var backFromTotal = false
-    var amountAvalable = Int()
-    var firstEarning = Int()
+//    var amountAvalable = Int()
+//    var firstEarning = Int()
     var forReloadData = CaculateTheSavingMoney()
     
     func setUpUnpredictableToKeyboard() {
@@ -61,8 +61,8 @@ class InputViewController: UIViewController, UITextFieldDelegate {
             percentageForSavingTextField.text = String(caculate.moneySavingPerYear.percentOfIncomeForSaving)
             yearsTextField.text = String(caculate.moneySavingPerYear.years)
             bankInterestTextField.text = String(caculate.interest)
-            firstEarning = Int(caculate.moneySavingPerYear.firstYearEarning)
-            amountAvalable = Int(caculate.amountAvailable)
+//            firstEarning = Int(caculate.moneySavingPerYear.firstYearEarning)
+//            amountAvalable = Int(caculate.amountAvailable)
         }
         caculate = CaculateTheSavingMoney()
         let fetchRequest: NSFetchRequest<Average> = Average.fetchRequest()
@@ -94,48 +94,52 @@ class InputViewController: UIViewController, UITextFieldDelegate {
 
     }
     
-    internal func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-        if amountAvailableTextField.isEditing {
-            updateRealTime(number: amountAvalable, string: string)
-        }else {
-            updateRealTime(number: firstEarning, string: string)
-        }
-        
-        return false
-    }
+//    internal func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
+//        if amountAvailableTextField.isEditing {
+//            updateRealTime(number: amountAvalable, string: string)
+//        }else {
+//            updateRealTime(number: firstEarning, string: string)
+//        }
+//
+//        return false
+//    }
     
-    func updateRealTime (number:Int,string:String) {
-        if let digit = Int(string) {
-            if amountAvailableTextField.isEditing {
-                amountAvalable = number * 10 + digit
-                amountAvailableTextField.text = updateToCurrency(number: amountAvalable)
-            }else {
-                firstEarning = number * 10 + digit
-                firstYearEarningTextField.text = updateToCurrency(number: firstEarning)
-            }
-            
-        }
-        if string == "" {
-            
-            if amountAvailableTextField.isEditing {
-                amountAvalable = number/10
-                amountAvailableTextField.text = updateToCurrency(number: number)
-            }else {
-                firstEarning = number/10
-                firstYearEarningTextField.text = updateToCurrency(number: number)
-            }
-        }
-    }
+//    func updateRealTime (number:Int,string:String) {
+//        if let digit = Int(string) {
+//            if amountAvailableTextField.isEditing {
+//                amountAvalable = number * 10 + digit
+//                amountAvailableTextField.text = updateToCurrency(number: amountAvalable)
+//            }else {
+//                firstEarning = number * 10 + digit
+//                firstYearEarningTextField.text = updateToCurrency(number: firstEarning)
+//            }
+//
+//        }
+//        if string == "" {
+//
+//            if amountAvailableTextField.isEditing {
+//                amountAvalable = number/10
+//                amountAvailableTextField.text = updateToCurrency(number: number)
+//            }else {
+//                firstEarning = number/10
+//                firstYearEarningTextField.text = updateToCurrency(number: number)
+//            }
+//        }
+//    }
     
-    func updateToCurrency(number: Int) ->String? {
-        let formatter = NumberFormatter()
-        formatter.numberStyle = NumberFormatter.Style.decimal
-        let amount = Int(number)
-        return formatter.string(from: NSNumber(value: amount))
-    }
+//    func updateToCurrency(number: Int) ->String? {
+//        let formatter = NumberFormatter()
+//        formatter.numberStyle = NumberFormatter.Style.decimal
+//        let amount = Int(number)
+//        return formatter.string(from: NSNumber(value: amount))
+//    }
    
     @IBAction func caculateResult(_ sender: UIButton) {
-        guard let annualIncomeIcreases = annualIncomeTextField.text,
+        guard let amountAvailable = amountAvailableTextField.text,
+            amountAvailable != "",
+            let firstYearEarning = firstYearEarningTextField.text,
+            firstYearEarning != "",
+            let annualIncomeIcreases = annualIncomeTextField.text,
             annualIncomeIcreases != "",
             let percentOfIncomeForSaving = percentageForSavingTextField.text,
             percentOfIncomeForSaving != "",
@@ -149,20 +153,22 @@ class InputViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        let firstYearEarningDouble:Double = Double(firstEarning)
+        let firstYearEarningDouble:Double? = Double(firstYearEarning)
         let annualIncomeIcreasesDbouble:Double? = Double(annualIncomeIcreases)
         let percentOfIncomeForSavingDouble:Double? = Double(percentOfIncomeForSaving)
         let yearsInt:Int? = Int(years)
-        let amountAvailableDouble:Double = Double(amountAvalable)
+        let amountAvailableDouble:Double? = Double(amountAvailable)
         let interestDouble:Double? = Double(interest)
         
-        if  firstYearEarningDouble >= 0,
+        if  let firstYearEarningDouble = firstYearEarningDouble,
+            firstYearEarningDouble >= 0,
             let annualIncomeIcreasesDbouble = annualIncomeIcreasesDbouble,
             annualIncomeIcreasesDbouble >= 0,
             let percentOfIncomeForSavingDouble = percentOfIncomeForSavingDouble,
             percentOfIncomeForSavingDouble >= 0,
             let yearsInt = yearsInt,
             yearsInt >= 1,
+            let amountAvailableDouble = amountAvailableDouble,
             amountAvailableDouble >= 0,
             let interestDouble = interestDouble,
             interestDouble >= 0
@@ -219,8 +225,8 @@ class InputViewController: UIViewController, UITextFieldDelegate {
             percentageForSavingTextField.text = String(averages.last!.percentForSaving)
             yearsTextField.text = String(averages.last!.year)
             bankInterestTextField.text = String(averages.last!.bankInterest)
-            firstEarning = Int(averages.last!.firstYearEarning)
-            amountAvalable = Int(averages.last!.amountAvailable)
+//            firstEarning = Int(averages.last!.firstYearEarning)
+//            amountAvalable = Int(averages.last!.amountAvailable)
         }else {
             recentButton.isEnabled = false
         }

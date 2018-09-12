@@ -29,11 +29,12 @@ class TotalResultViewController: UIViewController {
     var caculate = CaculateTheSavingMoney()
     var total = Double()
     var change = Double ()
+    var exchangeTF = UITextField()
     override func viewDidLoad() {
         super.viewDidLoad()
-        exchangeView.layer.borderWidth = 0.5
-        exchangeView.layer.borderColor = #colorLiteral(red: 0, green: 0.5690457821, blue: 0.5746168494, alpha: 1)
-        exchangeView.layer.cornerRadius = 8
+//        exchangeView.layer.borderWidth = 0.5
+//        exchangeView.layer.borderColor = #colorLiteral(red: 0, green: 0.5690457821, blue: 0.5746168494, alpha: 1)
+//        exchangeView.layer.cornerRadius = 8
         currencyUnitLabel.text =  String(caculate.currencyUnit)
         amountAvailable.text = Tools.changeToCurrency(moneyStr:String(caculate.amountAvailable) )
         
@@ -54,8 +55,34 @@ class TotalResultViewController: UIViewController {
 
     
     @IBAction func conver(_ sender: UIButton) {
-        AlertController.showTextField(inController: self, tilte: "", message: "")
+       let alertController = UIAlertController(title: "Exchange", message: "Enter the new value that you want to exchange", preferredStyle: .alert)
+        alertController.addTextField(configurationHandler: exchangeTF)
+        
+        let okAction = UIAlertAction(title: "OK", style: .default, handler: self.okHandler)
+        let cancelAction = UIAlertAction(title: "Cancel", style: .cancel, handler: nil)
+        
+        alertController.addAction(okAction)
+        alertController.addAction(cancelAction)
+        
+        self.present(alertController, animated: true)
     }
+    
+    func exchangeTF(textField:UITextField!) {
+        exchangeTF = textField
+        exchangeTF.placeholder = "Ex. 25000"
+        
+    }
+    
+    func okHandler(alert: UIAlertAction!) {
+        if let exchangeValue = exchangeTF.text{
+            let exchangeValueDouble:Double? = Double(exchangeValue)
+            if let exchangeValueDouble = exchangeValueDouble {
+                changeResult.text = Tools.changeToCurrency(moneyStr: String(exchangeValueDouble * total))
+                changeResult.isHidden = false
+            }
+        }
+    }
+    
     @IBAction func backToViewController(_ sender: UIButton) {
       //  self.performSegue(withIdentifier: "backInTotalTab", sender: nil)
     }
