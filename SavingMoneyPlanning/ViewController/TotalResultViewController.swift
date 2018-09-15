@@ -32,9 +32,8 @@ class TotalResultViewController: UIViewController {
     var exchangeTF = UITextField()
     override func viewDidLoad() {
         super.viewDidLoad()
-//        exchangeView.layer.borderWidth = 0.5
-//        exchangeView.layer.borderColor = #colorLiteral(red: 0, green: 0.5690457821, blue: 0.5746168494, alpha: 1)
-//        exchangeView.layer.cornerRadius = 8
+        
+        
         currencyUnitLabel.text =  String(caculate.currencyUnit)
         amountAvailable.text = Tools.changeToCurrency(moneyStr:String(caculate.amountAvailable) )
         
@@ -55,7 +54,7 @@ class TotalResultViewController: UIViewController {
 
     
     @IBAction func conver(_ sender: UIButton) {
-       let alertController = UIAlertController(title: "Exchange", message: "Enter the new value that you want to exchange", preferredStyle: .alert)
+       let alertController = UIAlertController(title: "Exchange", message: "Enter the new value that you want to exchange (25000 or 1/25000)", preferredStyle: .alert)
         alertController.addTextField(configurationHandler: exchangeTF)
         
         let okAction = UIAlertAction(title: "OK", style: .default, handler: self.okHandler)
@@ -69,17 +68,67 @@ class TotalResultViewController: UIViewController {
     
     func exchangeTF(textField:UITextField!) {
         exchangeTF = textField
+        exchangeTF.keyboardType = .numbersAndPunctuation
         exchangeTF.placeholder = "Ex. 25000"
         
     }
     
     func okHandler(alert: UIAlertAction!) {
-        if let exchangeValue = exchangeTF.text{
+        var secondNumber = String ()
+        var firstNumber = String ()
+        var firstNumberArray = [String] ()
+        var secondNumberArray = [String] ()
+        if var exchangeValue = exchangeTF.text{
+            exchangeValue = Tools.replaceSpace(string: exchangeValue)
             let exchangeValueDouble:Double? = Double(exchangeValue)
             if let exchangeValueDouble = exchangeValueDouble {
                 changeResult.text = Tools.changeToCurrency(moneyStr: String(exchangeValueDouble * total))
                 changeResult.isHidden = false
+            }else if exchangeValue.contains("/") {
+                var num = 0
+                for (index, value) in exchangeValue.enumerated() {
+                    if value == "/" {
+                        num = num + 1
+                        if index == 0 || index == (exchangeValue.count - 1) {
+                            AlertController.showAlert(inController: self, tilte: "Error!", message: "You put the '/' wrong place" )
+                            return
+                        }
+                    }
+                }
+                if num >= 2 {
+                    AlertController.showAlert(inController: self, tilte: "Error!", message: "Too many '/'")
+                    return
+                }else {
+                    var isFirstNumberDone = false
+                    for (_, value) in exchangeValue.enumerated() {
+                        if value != "/" && isFirstNumberDone == false {
+                            firstNumberArray.append(String(value))
+                        }else if value == "/" {
+                            isFirstNumberDone = true                        }
+                        else if isFirstNumberDone == true && value != "/" {
+                            secondNumberArray.append(String(value))
+                        }
+                    }
+                    for i in firstNumberArray {
+                        firstNumber = firstNumber + i
+                    }
+                    for i in secondNumberArray {
+                        secondNumber = secondNumber + i
+                    }
+                    let firstNumber:Double? = Double(firstNumber)
+                    let secondNumber:Double? = Double(secondNumber)
+                    
+                    if let firstNumber = firstNumber, let secondNumber = secondNumber {
+                        changeResult.text = String(total*(firstNumber/secondNumber))
+                        changeResult.isHidden = false
+                    }else {
+                        AlertController.showAlert(inController: self, tilte: "Error!!", message: "Please filling the true type ")
+                    }
+                }
+            }else {
+                  AlertController.showAlert(inController: self, tilte: "Error!!", message: "Please filling the true type ")
             }
+            
         }
     }
     

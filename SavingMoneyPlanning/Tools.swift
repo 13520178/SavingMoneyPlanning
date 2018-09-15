@@ -47,4 +47,9 @@ class Tools {
         }
       return ""
     }
+    
+    static func replaceSpace(string:String) -> String {
+        let newString = string.replacingOccurrences(of: " ", with: "", options: .literal, range: nil)
+        return newString
+    }
 }

@@ -40,11 +40,10 @@ class DetailViewController: UIViewController , UITableViewDelegate, UITableViewD
         cell.yearLabel.text = String(caculate.moneySavingPerYear.resultPerYears[indexPath.row].year + 1)
         
         let moneyForSaving = String((caculate.moneySavingPerYear.resultPerYears[indexPath.row + 1].money*100).rounded()/100)
-        cell.moneyForSavingLabel.text = Tools.changeToCurrency(moneyStr: moneyForSaving)
+        cell.moneyForSavingLabel.text = Tools.changeToCurrency(moneyStr: moneyForSaving)! + " " + caculate.currencyUnit
         
         let totalInTheBank = String((caculate.moneyPerYear[indexPath.row]*100).rounded()/100)
-        cell.totalInTheBankLabel.text =  Tools.changeToCurrency(moneyStr: totalInTheBank)
-        
+        cell.totalInTheBankLabel.text =  Tools.changeToCurrency(moneyStr: totalInTheBank)! + " " + caculate.currencyUnit
         return cell
     }
     

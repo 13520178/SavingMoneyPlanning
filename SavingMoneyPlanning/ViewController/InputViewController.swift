@@ -20,7 +20,8 @@ class InputViewController: UIViewController, UITextFieldDelegate {
     @IBOutlet weak var percentageForSavingTextField: UITextField!
     @IBOutlet weak var yearsTextField: UITextField!
     @IBOutlet weak var bankInterestTextField: UITextField!
-    @IBOutlet weak var AmountOfMoneyToBeAchieve: UITextField!
+    @IBOutlet weak var caculatorStackView: UIStackView!
+    
     
     @IBOutlet weak var recentButton: UIButton!
     @IBOutlet weak var avergaLabel: UILabel!
@@ -42,7 +43,6 @@ class InputViewController: UIViewController, UITextFieldDelegate {
         percentageForSavingTextField.autocorrectionType = .no
         yearsTextField.autocorrectionType = .no
         bankInterestTextField.autocorrectionType = .no
-        AmountOfMoneyToBeAchieve.autocorrectionType = .no
     }
     
     override func viewDidLoad() {
@@ -61,8 +61,12 @@ class InputViewController: UIViewController, UITextFieldDelegate {
             percentageForSavingTextField.text = String(caculate.moneySavingPerYear.percentOfIncomeForSaving)
             yearsTextField.text = String(caculate.moneySavingPerYear.years)
             bankInterestTextField.text = String(caculate.interest)
-//            firstEarning = Int(caculate.moneySavingPerYear.firstYearEarning)
-//            amountAvalable = Int(caculate.amountAvailable)
+            if caculate.moneySavingPerYear.isPercent  {
+                percentOrNumSegment.selectedSegmentIndex = 0
+            }else {
+                percentOrNumSegment.selectedSegmentIndex = 1
+            }
+            
         }
         caculate = CaculateTheSavingMoney()
         let fetchRequest: NSFetchRequest<Average> = Average.fetchRequest()
@@ -94,46 +98,6 @@ class InputViewController: UIViewController, UITextFieldDelegate {
 
     }
     
-//    internal func textField(_ textField: UITextField, shouldChangeCharactersIn range: NSRange, replacementString string: String) -> Bool {
-//        if amountAvailableTextField.isEditing {
-//            updateRealTime(number: amountAvalable, string: string)
-//        }else {
-//            updateRealTime(number: firstEarning, string: string)
-//        }
-//
-//        return false
-//    }
-    
-//    func updateRealTime (number:Int,string:String) {
-//        if let digit = Int(string) {
-//            if amountAvailableTextField.isEditing {
-//                amountAvalable = number * 10 + digit
-//                amountAvailableTextField.text = updateToCurrency(number: amountAvalable)
-//            }else {
-//                firstEarning = number * 10 + digit
-//                firstYearEarningTextField.text = updateToCurrency(number: firstEarning)
-//            }
-//
-//        }
-//        if string == "" {
-//
-//            if amountAvailableTextField.isEditing {
-//                amountAvalable = number/10
-//                amountAvailableTextField.text = updateToCurrency(number: number)
-//            }else {
-//                firstEarning = number/10
-//                firstYearEarningTextField.text = updateToCurrency(number: number)
-//            }
-//        }
-//    }
-    
-//    func updateToCurrency(number: Int) ->String? {
-//        let formatter = NumberFormatter()
-//        formatter.numberStyle = NumberFormatter.Style.decimal
-//        let amount = Int(number)
-//        return formatter.string(from: NSNumber(value: amount))
-//    }
-   
     @IBAction func caculateResult(_ sender: UIButton) {
         guard let amountAvailable = amountAvailableTextField.text,
             amountAvailable != "",
@@ -153,12 +117,12 @@ class InputViewController: UIViewController, UITextFieldDelegate {
             return
         }
         
-        let firstYearEarningDouble:Double? = Double(firstYearEarning)
-        let annualIncomeIcreasesDbouble:Double? = Double(annualIncomeIcreases)
-        let percentOfIncomeForSavingDouble:Double? = Double(percentOfIncomeForSaving)
-        let yearsInt:Int? = Int(years)
-        let amountAvailableDouble:Double? = Double(amountAvailable)
-        let interestDouble:Double? = Double(interest)
+        let firstYearEarningDouble:Double? = Double(Tools.replaceSpace(string: firstYearEarning))
+        let annualIncomeIcreasesDbouble:Double? = Double(Tools.replaceSpace(string: annualIncomeIcreases))
+        let percentOfIncomeForSavingDouble:Double? = Double(Tools.replaceSpace(string: percentOfIncomeForSaving))
+        let yearsInt:Int? = Int(Tools.replaceSpace(string: years))
+        let amountAvailableDouble:Double? = Double(Tools.replaceSpace(string: amountAvailable))
+        let interestDouble:Double? = Double(Tools.replaceSpace(string: interest))
         
         if  let firstYearEarningDouble = firstYearEarningDouble,
             firstYearEarningDouble >= 0,
@@ -216,6 +180,17 @@ class InputViewController: UIViewController, UITextFieldDelegate {
       
     }
     
+    
+    @IBOutlet weak var showOrHideCaculatorButton: UIButton!
+    @IBAction func showOrHideCaculator(_ sender: UIButton) {
+        caculatorStackView.isHidden = !caculatorStackView.isHidden
+        if !caculatorStackView.isHidden {
+            showOrHideCaculatorButton.setTitle("Hide Caculator", for: .normal)
+        }else {
+            showOrHideCaculatorButton.setTitle("Show Caculator", for: .normal) 
+        }
+    }
+    
     @IBAction func recentRecord(_ sender: UIButton) {
         if self.averages.count != 0 {
             currencyUnitTextField.text = averages.last!.currencyUnit
@@ -225,8 +200,11 @@ class InputViewController: UIViewController, UITextFieldDelegate {
             percentageForSavingTextField.text = String(averages.last!.percentForSaving)
             yearsTextField.text = String(averages.last!.year)
             bankInterestTextField.text = String(averages.last!.bankInterest)
-//            firstEarning = Int(averages.last!.firstYearEarning)
-//            amountAvalable = Int(averages.last!.amountAvailable)
+            if averages.last!.percentOrNumber {
+                percentOrNumSegment.selectedSegmentIndex = 0
+            }else {
+                percentOrNumSegment.selectedSegmentIndex = 1
+            }
         }else {
             recentButton.isEnabled = false
         }
