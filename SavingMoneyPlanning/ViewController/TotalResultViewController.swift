@@ -54,7 +54,7 @@ class TotalResultViewController: UIViewController {
 
     
     @IBAction func conver(_ sender: UIButton) {
-       let alertController = UIAlertController(title: "Exchange", message: "Enter the new value that you want to exchange (25000 or 1/25000)", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Exchange", message: "Enter the conversion factor (Ex. 100 or 1/100)", preferredStyle: .alert)
         alertController.addTextField(configurationHandler: exchangeTF)
         
         let okAction = UIAlertAction(title: "OK", style: .default, handler: self.okHandler)
@@ -69,7 +69,7 @@ class TotalResultViewController: UIViewController {
     func exchangeTF(textField:UITextField!) {
         exchangeTF = textField
         exchangeTF.keyboardType = .numbersAndPunctuation
-        exchangeTF.placeholder = "Ex. 25000"
+        exchangeTF.placeholder = "Ex. 25 000"
         
     }
     
@@ -122,11 +122,11 @@ class TotalResultViewController: UIViewController {
                         changeResult.text = String(total*(firstNumber/secondNumber))
                         changeResult.isHidden = false
                     }else {
-                        AlertController.showAlert(inController: self, tilte: "Error!!", message: "Please filling the true type ")
+                        AlertController.showAlert(inController: self, tilte: "Error!!", message: "Please fill in the correct format")
                     }
                 }
             }else {
-                  AlertController.showAlert(inController: self, tilte: "Error!!", message: "Please filling the true type ")
+                  AlertController.showAlert(inController: self, tilte: "Error!!", message: "Please fill in the correct format")
             }
             
         }

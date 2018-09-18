@@ -31,9 +31,9 @@ class InputViewController: UIViewController, UITextFieldDelegate {
     var averages = [Average]()
     var averageNumber = Double()
     var backFromTotal = false
-//    var amountAvalable = Int()
-//    var firstEarning = Int()
     var forReloadData = CaculateTheSavingMoney()
+    
+    
     
     func setUpUnpredictableToKeyboard() {
         currencyUnitTextField.autocorrectionType = .no
@@ -175,7 +175,7 @@ class InputViewController: UIViewController, UITextFieldDelegate {
             PersitenceService.saveContext()
             averages.append(average)
         } else {
-             AlertController.showAlert(inController: self, tilte: "Input Error", message: "Maybe some field wasn't correct.")
+             AlertController.showAlert(inController: self, tilte: "Input Error", message: "There may be a few errors during data entry")
         }
       
     }
@@ -185,9 +185,9 @@ class InputViewController: UIViewController, UITextFieldDelegate {
     @IBAction func showOrHideCaculator(_ sender: UIButton) {
         caculatorStackView.isHidden = !caculatorStackView.isHidden
         if !caculatorStackView.isHidden {
-            showOrHideCaculatorButton.setTitle("Hide Caculator", for: .normal)
+            showOrHideCaculatorButton.setTitle("Hide Calculator", for: .normal)
         }else {
-            showOrHideCaculatorButton.setTitle("Show Caculator", for: .normal) 
+            showOrHideCaculatorButton.setTitle("Show Calculator", for: .normal)
         }
     }
     
