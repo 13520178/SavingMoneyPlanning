@@ -13,8 +13,9 @@ class DetailTableViewCell: UITableViewCell {
     @IBOutlet weak var yearLabel: UILabel!
     @IBOutlet weak var moneyForSavingLabel: UILabel!
     @IBOutlet weak var totalInTheBankLabel: UILabel!
+    @IBOutlet weak var income: UILabel!
+    @IBOutlet weak var spendingMoney: UILabel!
     
-
     override func awakeFromNib() {
         super.awakeFromNib()
         // Initialization code

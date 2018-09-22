@@ -44,8 +44,8 @@ class TotalResultViewController: UIViewController {
         bankInterstRateLabel.text = String(caculate.interest)
         let bankMoneyPerYear = caculate.moneyPerYear
         let savingMoneyPerYear = caculate.moneySavingPerYear.resultPerYears
-        totalInBankLabel.text = Tools.changeToCurrency(moneyStr:String(((bankMoneyPerYear.last!*100).rounded()/100)) )
-        lastYearSavingMoneyLabel.text = Tools.changeToCurrency(moneyStr: (String((savingMoneyPerYear.last!.money*100).rounded()/100)))
+        totalInBankLabel.text = Tools.changeToCurrency(moneyStr:String(((bankMoneyPerYear.last!*100).rounded()/100)) )! + " " + String(caculate.currencyUnit)
+        lastYearSavingMoneyLabel.text = Tools.changeToCurrency(moneyStr: (String((savingMoneyPerYear.last!.money*100).rounded()/100)))! + " " + String(caculate.currencyUnit)
         total = ((bankMoneyPerYear.last! + savingMoneyPerYear.last!.money) * 100).rounded()/100
         totalLabel.text = Tools.changeToCurrency(moneyStr:String(total) )! + " " + String(caculate.currencyUnit)
 
@@ -54,7 +54,7 @@ class TotalResultViewController: UIViewController {
 
     
     @IBAction func conver(_ sender: UIButton) {
-        let alertController = UIAlertController(title: "Exchange", message: "Enter the conversion factor (Ex. 100 or 1/100)", preferredStyle: .alert)
+        let alertController = UIAlertController(title: "Change currency", message: "Enter the conversion factor (Ex. 100 or 1/100)", preferredStyle: .alert)
         alertController.addTextField(configurationHandler: exchangeTF)
         
         let okAction = UIAlertAction(title: "OK", style: .default, handler: self.okHandler)
@@ -119,7 +119,7 @@ class TotalResultViewController: UIViewController {
                     let secondNumber:Double? = Double(secondNumber)
                     
                     if let firstNumber = firstNumber, let secondNumber = secondNumber {
-                        changeResult.text = String(total*(firstNumber/secondNumber))
+                        changeResult.text = Tools.changeToCurrency(moneyStr: String(total*(firstNumber/secondNumber)))
                         changeResult.isHidden = false
                     }else {
                         AlertController.showAlert(inController: self, tilte: "Error!!", message: "Please fill in the correct format")

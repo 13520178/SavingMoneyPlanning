@@ -29,26 +29,26 @@ struct SavingMoney {
     
     //tính toán số tiền tiết kiệm mỗi năm
     mutating func caculateMoneyForSavingPerYears() -> [PerYearSavingMoney] {
-        var resultPerYear = PerYearSavingMoney(year: 0, money: 0)
+        var resultPerYear = PerYearSavingMoney(year: 0, money: 0,salary: 0)
         resultPerYears += [resultPerYear]
         var moneyMakePerYear = firstYearEarning
         for year in 1...years {
             if isPercent {
                 if year == 1 {
-                    resultPerYear = PerYearSavingMoney(year: year, money: moneyMakePerYear*(percentOfIncomeForSaving/100))
+                    resultPerYear = PerYearSavingMoney(year: year, money: moneyMakePerYear*(percentOfIncomeForSaving/100),salary: moneyMakePerYear )
                     resultPerYears += [resultPerYear]
                 } else {
                     moneyMakePerYear = moneyMakePerYear*(1+annualIncomeIcreases/100)
-                    resultPerYear = PerYearSavingMoney(year: year, money: moneyMakePerYear*(percentOfIncomeForSaving/100))
+                    resultPerYear = PerYearSavingMoney(year: year, money: moneyMakePerYear*(percentOfIncomeForSaving/100),salary: moneyMakePerYear)
                     resultPerYears += [resultPerYear]
                 }
             } else {
                 if year == 1 {
-                    resultPerYear = PerYearSavingMoney(year: year, money: moneyMakePerYear*(percentOfIncomeForSaving/100))
+                    resultPerYear = PerYearSavingMoney(year: year, money: moneyMakePerYear*(percentOfIncomeForSaving/100),salary: moneyMakePerYear)
                     resultPerYears += [resultPerYear]
                 } else {
                     moneyMakePerYear = moneyMakePerYear+(annualIncomeIcreases)
-                    resultPerYear = PerYearSavingMoney(year: year, money: moneyMakePerYear*(percentOfIncomeForSaving/100))
+                    resultPerYear = PerYearSavingMoney(year: year, money: moneyMakePerYear*(percentOfIncomeForSaving/100),salary: moneyMakePerYear)
                     resultPerYears += [resultPerYear]
                 }
             }

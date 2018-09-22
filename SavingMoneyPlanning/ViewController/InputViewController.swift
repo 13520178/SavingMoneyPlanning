@@ -33,7 +33,115 @@ class InputViewController: UIViewController, UITextFieldDelegate {
     var backFromTotal = false
     var forReloadData = CaculateTheSavingMoney()
     
+     let defaults = UserDefaults.standard
     
+    
+    var firstNumber = Double()
+    var secondNumber = Double ()
+    var kiemTraSoLanNhapDau = 1
+    var dau = 0
+    var tinhMoi = false
+    var stringForReset = ""
+    var hasPutEqua = false
+    @IBOutlet weak var label: UILabel!
+    @IBAction func numbers(_ sender: UIButton)
+    {
+        hasPutEqua = false
+        if tinhMoi {
+            if (label.text?.contains("+"))! || (label.text?.contains("-"))! || (label.text?.contains("x"))! || (label.text?.contains("/"))! {
+                label.text = label.text! + String(sender.tag-1)
+                tinhMoi = false
+            }else {
+                firstNumber = 0
+                secondNumber = 0
+                kiemTraSoLanNhapDau = 1
+                label.text = stringForReset + String(sender.tag-1)
+                stringForReset = label.text!
+            }
+        }else
+        {
+            label.text = label.text! + String(sender.tag-1)
+        }
+    }
+    
+    @IBAction func dieMarth(_ sender: UIButton)
+    {
+        if kiemTraSoLanNhapDau == 1 {
+            firstNumber = Double(label.text!)!
+            if sender.tag == 12 {
+                hasPutEqua = false
+                label.text = "+"
+                dau = 1
+            }else if sender.tag == 13 {
+                hasPutEqua = false
+                label.text = "-"
+                dau = 2
+            }else if sender.tag == 14 {
+                hasPutEqua = false
+                label.text = "x"
+                dau = 3
+            }else if sender.tag == 15 {
+                hasPutEqua = false
+                label.text  = "/"
+                dau = 4
+            }else if sender.tag == 16 {
+                if !hasPutEqua {
+                    label.text = String(firstNumber)
+                    hasPutEqua = true
+                }
+            }else if sender.tag == 11 {
+                stringForReset = ""
+                label.text = ""
+                firstNumber = 0
+                secondNumber = 0
+            }
+            kiemTraSoLanNhapDau = 2
+        }else if kiemTraSoLanNhapDau != 1 {
+            if sender.tag == 12 {
+                label.text = "+"
+                dau = 1
+            }else if sender.tag == 13 {
+                label.text = "-"
+                dau = 2
+            }else if sender.tag == 14 {
+                label.text = "x"
+                dau = 3
+            }else if sender.tag == 15 {
+                label.text  = "/"
+                dau = 4
+            }else if sender.tag == 16 {
+                if !hasPutEqua {
+                    let sc = label!.text!
+                    stringForReset = ""
+                    if sc.contains("+") || sc.contains("-") || sc.contains("x") || sc.contains("/") {
+                        let index = sc.index(sc.startIndex, offsetBy: 1)
+                        secondNumber = Double((String(sc[index...])))!
+                    }else {
+                        secondNumber = Double(sc)!
+                    }
+                    
+                    if dau == 1 {
+                        label.text = String(firstNumber + secondNumber)
+                    }else if dau == 2 {
+                        label.text = String(firstNumber - secondNumber)
+                    }else if dau == 3 {
+                        label.text = String(firstNumber * secondNumber)
+                    }else if dau == 4 {
+                        label.text = String(firstNumber / secondNumber)
+                    }
+                    firstNumber = Double(label.text!)!
+                    tinhMoi = true
+                    hasPutEqua = true
+                }
+            }else if sender.tag == 11 {
+                stringForReset = ""
+                label.text = ""
+                firstNumber = 0
+                secondNumber = 0
+            }
+        }
+        
+    }
     
     func setUpUnpredictableToKeyboard() {
         currencyUnitTextField.autocorrectionType = .no
@@ -79,14 +187,14 @@ class InputViewController: UIViewController, UITextFieldDelegate {
                 for aver in self.averages {
                     averageNumbers.append(aver.number)
                 }
-                forReloadData.moneySavingPerYear.firstYearEarning = self.averages.last?.firstYearEarning ?? 0
-                forReloadData.amountAvailable = self.averages.last?.amountAvailable ?? 0
-                forReloadData.currencyUnit = self.averages.last?.currencyUnit ?? ""
-                forReloadData.interest = self.averages.last?.bankInterest ?? 0
-                forReloadData.moneySavingPerYear.years = Int(self.averages.last?.year ?? 0)
-                forReloadData.moneySavingPerYear.percentOfIncomeForSaving = Double(self.averages.last?.percentForSaving ?? 0)
-                forReloadData.moneySavingPerYear.isPercent = self.averages.last?.percentOrNumber ?? true
-                forReloadData.moneySavingPerYear.annualIncomeIcreases = self.averages.last?.anualIcrease ?? 0
+                forReloadData.moneySavingPerYear.firstYearEarning = defaults.double(forKey: "firstYearEarningDefaults")
+                forReloadData.amountAvailable = defaults.double(forKey: "amountAvailableDefaults")
+                forReloadData.currencyUnit = defaults.string(forKey: "currencyUnitDefaults") ?? ""
+                forReloadData.interest = defaults.double(forKey: "bankInterestDefaults")
+                forReloadData.moneySavingPerYear.years = defaults.integer(forKey: "yearDefaults")
+                forReloadData.moneySavingPerYear.percentOfIncomeForSaving = defaults.double(forKey: "percentForSavingDefaults")
+                forReloadData.moneySavingPerYear.isPercent = defaults.bool(forKey: "percentOrNumberDefaults")
+                forReloadData.moneySavingPerYear.annualIncomeIcreases = defaults.double(forKey: "anualIcreaseDefaults")
                
                 let sumArray = averageNumbers.reduce(0, +)
                 let avgArrayValue = (sumArray / Double(averageNumbers.count)*100).rounded()/100
@@ -163,15 +271,16 @@ class InputViewController: UIViewController, UITextFieldDelegate {
             isPerformSegue = true
             let average = Average(context: PersitenceService.context)
             average.number = percentOfIncomeForSavingDouble
-            average.currencyUnit = currencyUnitValue
-            average.anualIcrease = annualIncomeIcreasesDbouble
-            average.amountAvailable = amountAvailableDouble
-            average.bankInterest = interestDouble
-            average.firstYearEarning = firstYearEarningDouble
-            average.percentForSaving = percentOfIncomeForSavingDouble
-            average.percentOrNumber = caculate.moneySavingPerYear.isPercent
-            average.year = Int16(yearsInt)
             
+            defaults.set(currencyUnitValue, forKey: "currencyUnitDefaults")
+            defaults.set(annualIncomeIcreasesDbouble, forKey: "anualIcreaseDefaults")
+            defaults.set(amountAvailableDouble, forKey: "amountAvailableDefaults")
+            defaults.set(interestDouble, forKey: "bankInterestDefaults")
+            defaults.set(firstYearEarningDouble, forKey: "firstYearEarningDefaults")
+            defaults.set(percentOfIncomeForSavingDouble, forKey: "percentForSavingDefaults")
+            defaults.set(caculate.moneySavingPerYear.isPercent, forKey: "percentOrNumberDefaults")
+            defaults.set(yearsInt, forKey: "yearDefaults")
+
             PersitenceService.saveContext()
             averages.append(average)
         } else {
@@ -192,22 +301,22 @@ class InputViewController: UIViewController, UITextFieldDelegate {
     }
     
     @IBAction func recentRecord(_ sender: UIButton) {
-        if self.averages.count != 0 {
-            currencyUnitTextField.text = averages.last!.currencyUnit
-            amountAvailableTextField.text = String(averages.last!.amountAvailable)
-            firstYearEarningTextField.text = String(averages.last!.firstYearEarning)
-            annualIncomeTextField.text = String(averages.last!.anualIcrease)
-            percentageForSavingTextField.text = String(averages.last!.percentForSaving)
-            yearsTextField.text = String(averages.last!.year)
-            bankInterestTextField.text = String(averages.last!.bankInterest)
-            if averages.last!.percentOrNumber {
+
+        if defaults.integer(forKey: "yearDefaults") != 0 {
+            currencyUnitTextField.text = defaults.string(forKey: "currencyUnitDefaults")
+            amountAvailableTextField.text = String(defaults.double(forKey: "amountAvailableDefaults"))
+            firstYearEarningTextField.text = String(defaults.double(forKey: "firstYearEarningDefaults"))
+            annualIncomeTextField.text = String(defaults.double(forKey: "anualIcreaseDefaults"))
+            percentageForSavingTextField.text = String(defaults.double(forKey: "percentForSavingDefaults"))
+            yearsTextField.text = String(defaults.integer(forKey: "yearDefaults"))
+            bankInterestTextField.text = String(defaults.double(forKey: "bankInterestDefaults"))
+            if defaults.bool(forKey: "percentOrNumberDefaults") {
                 percentOrNumSegment.selectedSegmentIndex = 0
             }else {
                 percentOrNumSegment.selectedSegmentIndex = 1
             }
-        }else {
-            recentButton.isEnabled = false
         }
+
     }
     
     
