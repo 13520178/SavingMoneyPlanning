@@ -217,11 +217,11 @@ class InputViewController: UIViewController, UITextFieldDelegate {
             percentOfIncomeForSaving != "",
             let years = yearsTextField.text,
             years != "",
-            let currencyUnitValue = currencyUnitTextField.text,
+            var currencyUnitValue = currencyUnitTextField.text,
             let interest = bankInterestTextField.text,
             interest != ""
         else {
-            AlertController.showAlert(inController: self, tilte: "Input Error", message: "Please filling out all required fields")
+            AlertController.showAlert(inController: self, tilte: "Input Error", message: "Please fill out all required fields")
             return
         }
         
@@ -231,6 +231,12 @@ class InputViewController: UIViewController, UITextFieldDelegate {
         let yearsInt:Int? = Int(Tools.replaceSpace(string: years))
         let amountAvailableDouble:Double? = Double(Tools.replaceSpace(string: amountAvailable))
         let interestDouble:Double? = Double(Tools.replaceSpace(string: interest))
+        
+        //Format the unit currency again
+        if currencyUnitValue == ""{
+            currencyUnitValue = " "
+        }
+        
         
         if  let firstYearEarningDouble = firstYearEarningDouble,
             firstYearEarningDouble >= 0,
@@ -246,7 +252,7 @@ class InputViewController: UIViewController, UITextFieldDelegate {
             interestDouble >= 0
         {
             if percentOfIncomeForSavingDouble > 100  {
-                AlertController.showAlert(inController: self, tilte: "Something wrong", message: "Percent of income for saving have to less than 100")
+                AlertController.showAlert(inController: self, tilte: "Something wrong", message: "Percent of income to save must be less than 100")
                 return
             }
             
