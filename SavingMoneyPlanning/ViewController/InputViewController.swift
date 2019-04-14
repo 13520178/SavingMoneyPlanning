@@ -8,8 +8,9 @@
 
 import UIKit
 import CoreData
+import GoogleMobileAds
 
-class InputViewController: UIViewController, UITextFieldDelegate {
+class InputViewController: UIViewController, UITextFieldDelegate, GADBannerViewDelegate {
     
     //MARK: - Outlet
     @IBOutlet weak var currencyUnitTextField: UITextField!
@@ -35,6 +36,7 @@ class InputViewController: UIViewController, UITextFieldDelegate {
     
      let defaults = UserDefaults.standard
     
+    @IBOutlet weak var bannerView: GADBannerView!
     
     var firstNumber = Double()
     var secondNumber = Double ()
@@ -157,6 +159,12 @@ class InputViewController: UIViewController, UITextFieldDelegate {
         super.viewDidLoad()
         self.hideKeyboardWhenTappedAround()
         setUpUnpredictableToKeyboard()
+        
+        bannerView.adSize = kGADAdSizeSmartBannerPortrait
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.rootViewController = self
+        bannerView.load(GADRequest())
+        bannerView.delegate = self
         
         amountAvailableTextField.delegate = self
         firstYearEarningTextField.delegate = self
@@ -300,9 +308,9 @@ class InputViewController: UIViewController, UITextFieldDelegate {
     @IBAction func showOrHideCaculator(_ sender: UIButton) {
         caculatorStackView.isHidden = !caculatorStackView.isHidden
         if !caculatorStackView.isHidden {
-            showOrHideCaculatorButton.setTitle("Hide Calculator", for: .normal)
+            showOrHideCaculatorButton.setTitle("Hide calculator", for: .normal)
         }else {
-            showOrHideCaculatorButton.setTitle("Show Calculator", for: .normal)
+            showOrHideCaculatorButton.setTitle("Show calculator", for: .normal)
         }
     }
     
