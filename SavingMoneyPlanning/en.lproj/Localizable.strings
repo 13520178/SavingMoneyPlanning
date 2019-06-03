@@ -5,3 +5,7 @@
   Created by Phan Nhat Dang on 5/19/19.
   Copyright © 2019 Phan Nhat Dang. All rights reserved.
 */
+
+"InputError" = "Error";
+"pleaseFill" = "Please fill out all required fields";
+"percentOfIncome" = "Percent of income to save must be less than 100";

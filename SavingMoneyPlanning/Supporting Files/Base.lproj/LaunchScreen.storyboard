@@ -18,7 +18,7 @@
                         <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
-                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="business-business-plan-close-up-908292" translatesAutoresizingMaskIntoConstraints="NO" id="N59-bB-tFd">
+                            <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="piggyBank" translatesAutoresizingMaskIntoConstraints="NO" id="N59-bB-tFd">
                                 <rect key="frame" x="0.0" y="0.0" width="375" height="812"/>
                             </imageView>
                         </subviews>
@@ -38,6 +38,6 @@
         </scene>
     </scenes>
     <resources>
-        <image name="business-business-plan-close-up-908292" width="2500" height="1653"/>
+        <image name="piggyBank" width="5592" height="3728"/>
     </resources>
 </document>

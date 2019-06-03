@@ -161,7 +161,7 @@ class InputViewController: UIViewController, UITextFieldDelegate, GADBannerViewD
         setUpUnpredictableToKeyboard()
         
         bannerView.adSize = kGADAdSizeSmartBannerPortrait
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.adUnitID = "ca-app-pub-9626752563546060/6460736189"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         bannerView.delegate = self
@@ -207,6 +207,7 @@ class InputViewController: UIViewController, UITextFieldDelegate, GADBannerViewD
                 let sumArray = averageNumbers.reduce(0, +)
                 let avgArrayValue = (sumArray / Double(averageNumbers.count)*100).rounded()/100
                  avergaLabel.text = "Average percentage savings : \(avgArrayValue)%"
+                //
             }
             
         }catch {}
@@ -229,7 +230,7 @@ class InputViewController: UIViewController, UITextFieldDelegate, GADBannerViewD
             let interest = bankInterestTextField.text,
             interest != ""
         else {
-            AlertController.showAlert(inController: self, tilte: "Input Error", message: "Please fill out all required fields")
+            AlertController.showAlert(inController: self, tilte: NSLocalizedString("Error", comment: "error"), message: NSLocalizedString("pleaseFill", comment: "Please Fill"))
             return
         }
         
@@ -260,7 +261,7 @@ class InputViewController: UIViewController, UITextFieldDelegate, GADBannerViewD
             interestDouble >= 0
         {
             if percentOfIncomeForSavingDouble > 100  {
-                AlertController.showAlert(inController: self, tilte: "Something wrong", message: "Percent of income to save must be less than 100")
+                AlertController.showAlert(inController: self, tilte: NSLocalizedString("Error", comment: "error"), message: NSLocalizedString("percentOfIncome", comment: "percent Of Income"))
                 return
             }
             

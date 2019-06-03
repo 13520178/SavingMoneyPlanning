@@ -52,7 +52,6 @@
 		1BA95614212FF28300DB2419 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1BA95619212FF28400DB2419 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BA9561C212FF28400DB2419 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
-		1BA9561E212FF28400DB2419 /* Info.plist */ = {isa = PBXFileReference; lastKnownFileType = text.plist.xml; path = Info.plist; sourceTree = "<group>"; };
 		61CDFE4F2540FB6B8D214FA2 /* Pods-SavingMoneyPlanning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SavingMoneyPlanning.release.xcconfig"; path = "Pods/Target Support Files/Pods-SavingMoneyPlanning/Pods-SavingMoneyPlanning.release.xcconfig"; sourceTree = "<group>"; };
 		A765D7B8652CE9ED0A5ECDE2 /* Pods-SavingMoneyPlanning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SavingMoneyPlanning.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SavingMoneyPlanning/Pods-SavingMoneyPlanning.debug.xcconfig"; sourceTree = "<group>"; };
 		BB5F61E195C418F7EE22BF38 /* Pods_SavingMoneyPlanning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SavingMoneyPlanning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -137,7 +136,6 @@
 				1B2297C52132A923002900B4 /* Model */,
 				1BA95613212FF28300DB2419 /* Main.storyboard */,
 				1B157C2722914DF100345E4B /* Localizable.strings */,
-				1BA9561E212FF28400DB2419 /* Info.plist */,
 				1BA95619212FF28400DB2419 /* Assets.xcassets */,
 				1BA9560F212FF28300DB2419 /* AppDelegate.swift */,
 				1B2297C72132A94F002900B4 /* Supporting Files */,
