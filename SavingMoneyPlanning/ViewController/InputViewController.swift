@@ -24,6 +24,15 @@ class InputViewController: UIViewController, UITextFieldDelegate, GADBannerViewD
     @IBOutlet weak var caculatorStackView: UIStackView!
     
     
+    @IBOutlet weak var viewFirst: UIView!
+    @IBOutlet weak var viewSecond: UIView!
+    
+    @IBOutlet weak var topMainViewConstant: NSLayoutConstraint!
+    // Screen height.
+    public var screenHeight: CGFloat {
+        return self.view!.bounds.height
+    }
+    
     @IBOutlet weak var recentButton: UIButton!
     @IBOutlet weak var avergaLabel: UILabel!
     //Declare variable
@@ -161,13 +170,64 @@ class InputViewController: UIViewController, UITextFieldDelegate, GADBannerViewD
         setUpUnpredictableToKeyboard()
         
         bannerView.adSize = kGADAdSizeSmartBannerPortrait
-        bannerView.adUnitID = "ca-app-pub-9626752563546060/6460736189"
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         bannerView.delegate = self
         
         amountAvailableTextField.delegate = self
         firstYearEarningTextField.delegate = self
+        
+        viewFirst.layer.borderWidth = 1
+        viewFirst.layer.borderColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
+        
+        viewSecond.layer.borderWidth = 1
+        viewSecond.layer.borderColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
+        
+        recentButton.layer.borderWidth = 1
+        recentButton.layer.borderColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
+        
+        currencyUnitTextField.layer.borderColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
+        currencyUnitTextField.layer.borderWidth = 1
+        currencyUnitTextField.layer.cornerRadius = 4
+        currencyUnitTextField.textColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
+        
+        yearsTextField.layer.borderColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
+        yearsTextField.layer.borderWidth = 1
+        yearsTextField.layer.cornerRadius = 4
+        yearsTextField.textColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
+        
+        annualIncomeTextField.layer.borderColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
+        annualIncomeTextField.layer.borderWidth = 1
+        annualIncomeTextField.layer.cornerRadius = 4
+        annualIncomeTextField.textColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
+        
+        bankInterestTextField.layer.borderColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
+        bankInterestTextField.layer.borderWidth = 1
+        bankInterestTextField.layer.cornerRadius = 4
+        bankInterestTextField.textColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
+        
+        amountAvailableTextField.layer.borderColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
+        amountAvailableTextField.layer.borderWidth = 1
+        amountAvailableTextField.layer.cornerRadius = 4
+        amountAvailableTextField.textColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
+        
+        firstYearEarningTextField.layer.borderColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
+        firstYearEarningTextField.layer.borderWidth = 1
+        firstYearEarningTextField.layer.cornerRadius = 4
+        firstYearEarningTextField.textColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
+        
+        currencyUnitTextField.layer.borderColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
+        currencyUnitTextField.layer.borderWidth = 1
+        currencyUnitTextField.layer.cornerRadius = 4
+        currencyUnitTextField.textColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
+        
+        percentageForSavingTextField.layer.borderColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
+        percentageForSavingTextField.layer.borderWidth = 1
+        percentageForSavingTextField.layer.cornerRadius = 4
+        percentageForSavingTextField.textColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
+        
+        
         
         if backFromTotal {
             currencyUnitTextField.text = caculate.currencyUnit
