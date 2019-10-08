@@ -21,9 +21,10 @@ class TotalResultViewController: UIViewController {
     @IBOutlet weak var totalInBankLabel: UILabel!
     @IBOutlet weak var lastYearSavingMoneyLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
-    @IBOutlet weak var exchangeView: UIView!
     
 
+    @IBOutlet weak var firstView: UIView!
+    @IBOutlet weak var secondView: UIView!
     
     @IBOutlet weak var changeResult: UILabel!
     var caculate = CaculateTheSavingMoney()
@@ -33,6 +34,14 @@ class TotalResultViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         
+        firstView.layer.borderWidth = 1
+        firstView.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        
+        secondView.layer.borderWidth = 1
+        secondView.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        
+        changeResult.layer.borderWidth = 1
+        changeResult.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         
         currencyUnitLabel.text =  String(caculate.currencyUnit)
         amountAvailable.text = Tools.changeToCurrency(moneyStr:String(caculate.amountAvailable) )
@@ -54,7 +63,7 @@ class TotalResultViewController: UIViewController {
 
     
     @IBAction func conver(_ sender: UIButton) {
-        let alertController = UIAlertController(title: "Change currency", message: "Enter the conversion factor (Ex. 100 or 1/100)", preferredStyle: .alert)
+        let alertController = UIAlertController(title: Tools.changeCurrency, message: "Enter the conversion factor (Ex. 100 or 1/100)", preferredStyle: .alert)
         alertController.addTextField(configurationHandler: exchangeTF)
         
         let okAction = UIAlertAction(title: "OK", style: .default, handler: self.okHandler)
@@ -90,13 +99,13 @@ class TotalResultViewController: UIViewController {
                     if value == "/" {
                         num = num + 1
                         if index == 0 || index == (exchangeValue.count - 1) {
-                            AlertController.showAlert(inController: self, tilte: "Error!", message: "You put the '/' wrong place" )
+                            AlertController.showAlert(inController: self, tilte: Tools.error, message: Tools.putWrongPlace )
                             return
                         }
                     }
                 }
                 if num >= 2 {
-                    AlertController.showAlert(inController: self, tilte: "Error!", message: "Too many '/'")
+                    AlertController.showAlert(inController: self, tilte: Tools.error, message: Tools.putWrongPlace)
                     return
                 }else {
                     var isFirstNumberDone = false
@@ -119,22 +128,22 @@ class TotalResultViewController: UIViewController {
                     let secondNumber:Double? = Double(secondNumber)
                     
                     if let firstNumber = firstNumber, let secondNumber = secondNumber {
-                        changeResult.text = Tools.changeToCurrency(moneyStr: String(total*(firstNumber/secondNumber)))
+                        let zeroResult = Tools.error
+                        let result = Tools.changeToCurrency(moneyStr: String(total*(firstNumber/secondNumber)))
+                        changeResult.text = "\(result ?? zeroResult)"
                         changeResult.isHidden = false
                     }else {
-                        AlertController.showAlert(inController: self, tilte: "Error!!", message: "Please fill in the correct format")
+                        AlertController.showAlert(inController: self, tilte: Tools.error, message: Tools.pleaseFillCorrect)
                     }
                 }
             }else {
-                  AlertController.showAlert(inController: self, tilte: "Error!!", message: "Please fill in the correct format")
+                  AlertController.showAlert(inController: self, tilte: Tools.error, message: Tools.pleaseFillCorrect)
             }
             
         }
     }
     
-    @IBAction func backToViewController(_ sender: UIButton) {
-      //  self.performSegue(withIdentifier: "backInTotalTab", sender: nil)
-    }
+   
     
    
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {

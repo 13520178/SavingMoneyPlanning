@@ -9,3 +9,19 @@
 "InputError" = "Error";
 "pleaseFill" = "Please fill out all required fields";
 "percentOfIncome" = "Percent of income to save must be less than 100";
+"stringDaily" = "Daily";
+"stringWeekly" = "Weekly";
+"stringMonthly" = "Monthly";
+"stringQuarterly" = "Quarterly";
+"stringAnnually" = "Annually";
+"averagePercentSaving" = "Average percentage savings: ";
+"inputError" = "Input Error";
+"errorDuringDataEntry" = "There may be a few errors during data entry";
+"hideCalculator" = "Hide calculator";
+"showCalculator" = "Show calculator";
+"changeCurrency" = "Change currency";
+"enterTheConversionFactor" = "Enter the conversion factor (Ex. 100 or 1/100)";
+"error" = "Error";
+"pleaseFillCorrect" = "Please fill in the correct format";
+"putWrongPlace" = "You put the '/' wrong place";
+

@@ -14,6 +14,7 @@ class DetailViewController: UIViewController , UITableViewDelegate, UITableViewD
     
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet weak var totalSavingStackView: UIStackView!
     
     var caculate = CaculateTheSavingMoney()
     var total = Double()
@@ -22,6 +23,12 @@ class DetailViewController: UIViewController , UITableViewDelegate, UITableViewD
         super.viewDidLoad()
         tableView.delegate = self
         tableView.dataSource = self
+        
+        tableView.layer.borderWidth = 1
+        tableView.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
+        
+        totalSavingStackView.layer.borderWidth = 1
+        totalSavingStackView.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         
         
         totalLabel.text = Tools.changeToCurrency(moneyStr: String(total))! + " " + caculate.currencyUnit
@@ -54,13 +61,4 @@ class DetailViewController: UIViewController , UITableViewDelegate, UITableViewD
         return cell
     }
     
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        if segue.identifier == "backToTotal" {
-            if let destination = segue.destination as? TotalResultViewController {
-                destination.caculate = caculate
-            }
-        }
-    }
-    
-
 }

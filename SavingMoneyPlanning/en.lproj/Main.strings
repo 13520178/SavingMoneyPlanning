@@ -1,9 +1,9 @@
 
+/* Class = "UILabel"; text = "Sorry for the ad !"; ObjectID = "0Qr-Tl-JZG"; */
+"0Qr-Tl-JZG.text" = "Sorry for the ad !";
+
 /* Class = "UIButton"; normalTitle = "Show details"; ObjectID = "2Qe-er-SdX"; */
 "2Qe-er-SdX.normalTitle" = "Show details";
-
-/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "3u1-Sp-JcO"; */
-"3u1-Sp-JcO.normalTitle" = "Back";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "4Ox-Bz-YhB"; */
 "4Ox-Bz-YhB.text" = "Label";
@@ -20,6 +20,9 @@
 /* Class = "UIButton"; normalTitle = "3"; ObjectID = "7dx-kl-VFR"; */
 "7dx-kl-VFR.normalTitle" = "3";
 
+/* Class = "UILabel"; text = "TIme (years)"; ObjectID = "7q9-Y8-Y4S"; */
+"7q9-Y8-Y4S.text" = "Time (years)";
+
 /* Class = "UILabel"; text = "First year earnings"; ObjectID = "8ea-KR-bYg"; */
 "8ea-KR-bYg.text" = "First year earnings";
 
@@ -35,6 +38,12 @@
 /* Class = "UIButton"; normalTitle = "9"; ObjectID = "BcU-0z-nBj"; */
 "BcU-0z-nBj.normalTitle" = "9";
 
+/* Class = "UINavigationItem"; title = "Other formula"; ObjectID = "Bee-vQ-MtD"; */
+"Bee-vQ-MtD.title" = "Other formula";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "CNA-zu-2FG"; */
+"CNA-zu-2FG.text" = "0";
+
 /* Class = "UILabel"; text = "Annual income increases"; ObjectID = "CaS-wH-YJ7"; */
 "CaS-wH-YJ7.text" = "Annual income increases";
 
@@ -46,6 +55,12 @@
 
 /* Class = "UITextField"; placeholder = "20"; ObjectID = "Dde-Mc-EwY"; */
 "Dde-Mc-EwY.placeholder" = "20";
+
+/* Class = "UILabel"; text = "Compound"; ObjectID = "EMM-wC-UQy"; */
+"EMM-wC-UQy.text" = "Compound";
+
+/* Class = "UINavigationItem"; title = "Savings"; ObjectID = "Evs-0R-aMm"; */
+"Evs-0R-aMm.title" = "Savings";
 
 /* Class = "UITextField"; placeholder = "Ex. 50 000"; ObjectID = "FLq-Ji-3RA"; */
 "FLq-Ji-3RA.placeholder" = "Ex. 50 000";
@@ -65,11 +80,11 @@
 /* Class = "UILabel"; text = "Total in the bank:  "; ObjectID = "HjJ-6B-eW2"; */
 "HjJ-6B-eW2.text" = "Total in the bank:  ";
 
-/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "HnM-hh-Haq"; */
-"HnM-hh-Haq.normalTitle" = "Back";
-
 /* Class = "UILabel"; text = "Percent of income for savings"; ObjectID = "I5S-D4-MFb"; */
 "I5S-D4-MFb.text" = "Percent of income for savings";
+
+/* Class = "UIViewController"; title = "Details"; ObjectID = "JM3-80-9ea"; */
+"JM3-80-9ea.title" = "Details";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "LUm-cT-8Yp"; */
 "LUm-cT-8Yp.text" = "Label";
@@ -95,11 +110,14 @@
 /* Class = "UILabel"; text = "10000000000000"; ObjectID = "OWb-oV-Qrc"; */
 "OWb-oV-Qrc.text" = "10000000000000";
 
-/* Class = "UITabBarItem"; title = "Caculation"; ObjectID = "Ozd-MQ-Bj3"; */
-"Ozd-MQ-Bj3.title" = "Caculation";
+/* Class = "UITabBarItem"; title = "Other"; ObjectID = "Ozd-MQ-Bj3"; */
+"Ozd-MQ-Bj3.title" = "Other";
 
 /* Class = "UILabel"; text = "Years"; ObjectID = "Q8D-9S-3Pm"; */
 "Q8D-9S-3Pm.text" = "Years";
+
+/* Class = "UILabel"; text = "Principal"; ObjectID = "QHQ-1G-nIT"; */
+"QHQ-1G-nIT.text" = "Principal";
 
 /* Class = "UIButton"; normalTitle = "1"; ObjectID = "Qke-de-vlU"; */
 "Qke-de-vlU.normalTitle" = "1";
@@ -113,8 +131,8 @@
 /* Class = "UILabel"; text = "Total in the bank:"; ObjectID = "T3U-sF-DMp"; */
 "T3U-sF-DMp.text" = "Total in the bank:";
 
-/* Class = "UILabel"; text = "Total savings:  "; ObjectID = "TxU-Yq-SmJ"; */
-"TxU-Yq-SmJ.text" = "Total savings:  ";
+/* Class = "UILabel"; text = "TOTAL SAVINGS "; ObjectID = "TxU-Yq-SmJ"; */
+"TxU-Yq-SmJ.text" = "TOTAL SAVINGS ";
 
 /* Class = "UILabel"; text = " "; ObjectID = "VYL-TG-JmK"; */
 "VYL-TG-JmK.text" = " ";
@@ -127,6 +145,12 @@
 
 /* Class = "UILabel"; text = "Spending money: "; ObjectID = "WY5-6z-rOu"; */
 "WY5-6z-rOu.text" = "Spending money: ";
+
+/* Class = "UIButton"; normalTitle = "Calculate"; ObjectID = "WYl-4x-cHa"; */
+"WYl-4x-cHa.normalTitle" = "Calculate";
+
+/* Class = "UIButton"; normalTitle = "More detail formula"; ObjectID = "WzB-Oo-bfn"; */
+"WzB-Oo-bfn.normalTitle" = "More detail formula";
 
 /* Class = "UIButton"; normalTitle = "/"; ObjectID = "X8E-FY-tYz"; */
 "X8E-FY-tYz.normalTitle" = "/";
@@ -142,6 +166,12 @@
 
 /* Class = "UILabel"; text = "10000000000000"; ObjectID = "Z2T-tS-R9w"; */
 "Z2T-tS-R9w.text" = "10000000000000";
+
+/* Class = "UITextField"; placeholder = "Ex. 100 000"; ObjectID = "Z5h-5z-gY2"; */
+"Z5h-5z-gY2.placeholder" = "Ex. 100 000";
+
+/* Class = "UILabel"; text = "Interest (%)"; ObjectID = "ZNP-a7-duW"; */
+"ZNP-a7-duW.text" = "Interest (%)";
 
 /* Class = "UILabel"; text = "Annual income increases:  "; ObjectID = "a67-JL-3Hk"; */
 "a67-JL-3Hk.text" = "Annual income increases:  ";
@@ -161,6 +191,9 @@
 /* Class = "UISegmentedControl"; fXf-Kk-8Fa.segmentTitles[1] = "Number"; ObjectID = "fXf-Kk-8Fa"; */
 "fXf-Kk-8Fa.segmentTitles[1]" = "Number";
 
+/* Class = "UITextField"; placeholder = "Ex. 20"; ObjectID = "fsd-lf-b0i"; */
+"fsd-lf-b0i.placeholder" = "Ex. 20";
+
 /* Class = "UIButton"; normalTitle = "5"; ObjectID = "h6I-PF-E8v"; */
 "h6I-PF-E8v.normalTitle" = "5";
 
@@ -169,6 +202,9 @@
 
 /* Class = "UIButton"; normalTitle = "x"; ObjectID = "ixf-rd-A0m"; */
 "ixf-rd-A0m.normalTitle" = "x";
+
+/* Class = "UIViewController"; title = "Result"; ObjectID = "jZy-XN-bZ2"; */
+"jZy-XN-bZ2.title" = "Result";
 
 /* Class = "UILabel"; text = "%"; ObjectID = "jvV-Aa-SlK"; */
 "jvV-Aa-SlK.text" = "%";
@@ -190,6 +226,12 @@
 
 /* Class = "UILabel"; text = "%"; ObjectID = "pcF-da-m5l"; */
 "pcF-da-m5l.text" = "%";
+
+/* Class = "UIButton"; normalTitle = "Weekly"; ObjectID = "pcH-w5-qSB"; */
+"pcH-w5-qSB.normalTitle" = "Weekly";
+
+/* Class = "UITabBarItem"; title = "Calculator"; ObjectID = "qYc-qU-gBN"; */
+"qYc-qU-gBN.title" = "Calculator";
 
 /* Class = "UILabel"; text = "10000000000000"; ObjectID = "qt4-mI-oBk"; */
 "qt4-mI-oBk.text" = "10000000000000";
@@ -215,11 +257,14 @@
 /* Class = "UILabel"; text = "First year earnings:  "; ObjectID = "u5X-CB-D7b"; */
 "u5X-CB-D7b.text" = "First year earnings:  ";
 
+/* Class = "UITextField"; placeholder = "Ex. 7"; ObjectID = "ucc-AI-3sb"; */
+"ucc-AI-3sb.placeholder" = "Ex. 7";
+
 /* Class = "UIButton"; normalTitle = "6"; ObjectID = "ujn-8P-hEC"; */
 "ujn-8P-hEC.normalTitle" = "6";
 
-/* Class = "UILabel"; text = "Result Total"; ObjectID = "vJn-sG-6Oa"; */
-"vJn-sG-6Oa.text" = "Result Total";
+/* Class = "UILabel"; text = "Result"; ObjectID = "vfE-7m-6GU"; */
+"vfE-7m-6GU.text" = "Result";
 
 /* Class = "UIButton"; normalTitle = "Show calculator"; ObjectID = "vjF-Ik-DXL"; */
 "vjF-Ik-DXL.normalTitle" = "Show calculator";
@@ -229,9 +274,6 @@
 
 /* Class = "UIButton"; normalTitle = "Recent record"; ObjectID = "xlL-CX-QTM"; */
 "xlL-CX-QTM.normalTitle" = "Recent record";
-
-/* Class = "UILabel"; text = "Details"; ObjectID = "ylB-wz-qqM"; */
-"ylB-wz-qqM.text" = "Details";
 
 /* Class = "UIButton"; normalTitle = "2"; ObjectID = "zWr-Zl-hQH"; */
 "zWr-Zl-hQH.normalTitle" = "2";

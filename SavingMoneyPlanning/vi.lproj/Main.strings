@@ -1,9 +1,9 @@
 
+/* Class = "UILabel"; text = "Sorry for the ad !"; ObjectID = "0Qr-Tl-JZG"; */
+"0Qr-Tl-JZG.text" = "Sorry for the ad !";
+
 /* Class = "UIButton"; normalTitle = "Show details"; ObjectID = "2Qe-er-SdX"; */
 "2Qe-er-SdX.normalTitle" = "Chi tiết";
-
-/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "3u1-Sp-JcO"; */
-"3u1-Sp-JcO.normalTitle" = "Quay lại";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "4Ox-Bz-YhB"; */
 "4Ox-Bz-YhB.text" = "Label";
@@ -15,10 +15,13 @@
 "6aN-hu-ksK.text" = "Năm: ";
 
 /* Class = "UILabel"; text = "Years:  "; ObjectID = "6n5-Ic-zzW"; */
-"6n5-Ic-zzW.text" = "Số năm:  ";
+"6n5-Ic-zzW.text" = "Năm:  ";
 
 /* Class = "UIButton"; normalTitle = "3"; ObjectID = "7dx-kl-VFR"; */
 "7dx-kl-VFR.normalTitle" = "3";
+
+/* Class = "UILabel"; text = "TIme (years)"; ObjectID = "7q9-Y8-Y4S"; */
+"7q9-Y8-Y4S.text" = "Thời gian (năm)";
 
 /* Class = "UILabel"; text = "First year earnings"; ObjectID = "8ea-KR-bYg"; */
 "8ea-KR-bYg.text" = "Thu nhập năm đầu";
@@ -27,13 +30,19 @@
 "8fc-hF-JvT.text" = "10000000000000";
 
 /* Class = "UILabel"; text = "(Average percentage savings : 20%)"; ObjectID = "8yq-pV-AmJ"; */
-"8yq-pV-AmJ.text" = "(Phân trăm tiết kiệm trung bình : 20%)";
+"8yq-pV-AmJ.text" = "(Phần trăm tiết kiệm trung bình : 20%)";
 
 /* Class = "UILabel"; text = "(Because in the last year you have not received interest from the bank)"; ObjectID = "9g5-f5-xxq"; */
-"9g5-f5-xxq.text" = "(Vì năm cuối bạn vẫn chưa nhận được tiền lời ngân hàng)";
+"9g5-f5-xxq.text" = "(Bởi vì năm cuối bạn vẫn chưa nhận được tiền lãi từ ngân hàng)";
 
 /* Class = "UIButton"; normalTitle = "9"; ObjectID = "BcU-0z-nBj"; */
 "BcU-0z-nBj.normalTitle" = "9";
+
+/* Class = "UINavigationItem"; title = "Other formula"; ObjectID = "Bee-vQ-MtD"; */
+"Bee-vQ-MtD.title" = "Công thức khác";
+
+/* Class = "UILabel"; text = "0"; ObjectID = "CNA-zu-2FG"; */
+"CNA-zu-2FG.text" = "0";
 
 /* Class = "UILabel"; text = "Annual income increases"; ObjectID = "CaS-wH-YJ7"; */
 "CaS-wH-YJ7.text" = "Thu nhập tăng hàng năm";
@@ -46,6 +55,12 @@
 
 /* Class = "UITextField"; placeholder = "20"; ObjectID = "Dde-Mc-EwY"; */
 "Dde-Mc-EwY.placeholder" = "20";
+
+/* Class = "UILabel"; text = "Compound"; ObjectID = "EMM-wC-UQy"; */
+"EMM-wC-UQy.text" = "Kì ghép lãi";
+
+/* Class = "UINavigationItem"; title = "Savings"; ObjectID = "Evs-0R-aMm"; */
+"Evs-0R-aMm.title" = "Lãi suất kép";
 
 /* Class = "UITextField"; placeholder = "Ex. 50 000"; ObjectID = "FLq-Ji-3RA"; */
 "FLq-Ji-3RA.placeholder" = "Vd. 50 000";
@@ -65,11 +80,11 @@
 /* Class = "UILabel"; text = "Total in the bank:  "; ObjectID = "HjJ-6B-eW2"; */
 "HjJ-6B-eW2.text" = "Trong ngân hàng:  ";
 
-/* Class = "UIButton"; normalTitle = "Back"; ObjectID = "HnM-hh-Haq"; */
-"HnM-hh-Haq.normalTitle" = "Quay lại";
-
 /* Class = "UILabel"; text = "Percent of income for savings"; ObjectID = "I5S-D4-MFb"; */
-"I5S-D4-MFb.text" = "Phần thu nhập để tiết kiệm";
+"I5S-D4-MFb.text" = "Phần trăm thu nhập để tiết kiệm";
+
+/* Class = "UIViewController"; title = "Details"; ObjectID = "JM3-80-9ea"; */
+"JM3-80-9ea.title" = "Chi tiết";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "LUm-cT-8Yp"; */
 "LUm-cT-8Yp.text" = "Label";
@@ -90,16 +105,19 @@
 "NHk-v0-FDx.text" = "Số tiền hiện có";
 
 /* Class = "UILabel"; text = "Currency unit:  "; ObjectID = "Nao-ws-d1Q"; */
-"Nao-ws-d1Q.text" = "Đơn vị tiền tệ:  ";
+"Nao-ws-d1Q.text" = "Đơn vị:  ";
 
 /* Class = "UILabel"; text = "10000000000000"; ObjectID = "OWb-oV-Qrc"; */
 "OWb-oV-Qrc.text" = "10000000000000";
 
-/* Class = "UITabBarItem"; title = "Caculation"; ObjectID = "Ozd-MQ-Bj3"; */
-"Ozd-MQ-Bj3.title" = "Tính toán";
+/* Class = "UITabBarItem"; title = "Other"; ObjectID = "Ozd-MQ-Bj3"; */
+"Ozd-MQ-Bj3.title" = "Khác";
 
 /* Class = "UILabel"; text = "Years"; ObjectID = "Q8D-9S-3Pm"; */
-"Q8D-9S-3Pm.text" = "Số năm";
+"Q8D-9S-3Pm.text" = "Năm";
+
+/* Class = "UILabel"; text = "Principal"; ObjectID = "QHQ-1G-nIT"; */
+"QHQ-1G-nIT.text" = "Số tiền";
 
 /* Class = "UIButton"; normalTitle = "1"; ObjectID = "Qke-de-vlU"; */
 "Qke-de-vlU.normalTitle" = "1";
@@ -111,10 +129,10 @@
 "Snc-Iw-VeY.text" = "Năm cuối:";
 
 /* Class = "UILabel"; text = "Total in the bank:"; ObjectID = "T3U-sF-DMp"; */
-"T3U-sF-DMp.text" = "Tổng cộng trong ngân hàng:";
+"T3U-sF-DMp.text" = "Trong ngân hàng:";
 
-/* Class = "UILabel"; text = "Total savings:  "; ObjectID = "TxU-Yq-SmJ"; */
-"TxU-Yq-SmJ.text" = "Tổng tiết kiệm:  ";
+/* Class = "UILabel"; text = "TOTAL SAVINGS "; ObjectID = "TxU-Yq-SmJ"; */
+"TxU-Yq-SmJ.text" = "Tổng tiết kiệm ";
 
 /* Class = "UILabel"; text = " "; ObjectID = "VYL-TG-JmK"; */
 "VYL-TG-JmK.text" = " ";
@@ -127,6 +145,12 @@
 
 /* Class = "UILabel"; text = "Spending money: "; ObjectID = "WY5-6z-rOu"; */
 "WY5-6z-rOu.text" = "Số tiền sử dụng: ";
+
+/* Class = "UIButton"; normalTitle = "Calculate"; ObjectID = "WYl-4x-cHa"; */
+"WYl-4x-cHa.normalTitle" = "Tính toán";
+
+/* Class = "UIButton"; normalTitle = "More detail formula"; ObjectID = "WzB-Oo-bfn"; */
+"WzB-Oo-bfn.normalTitle" = "Công thức chi tiết hơn";
 
 /* Class = "UIButton"; normalTitle = "/"; ObjectID = "X8E-FY-tYz"; */
 "X8E-FY-tYz.normalTitle" = "/";
@@ -143,23 +167,32 @@
 /* Class = "UILabel"; text = "10000000000000"; ObjectID = "Z2T-tS-R9w"; */
 "Z2T-tS-R9w.text" = "10000000000000";
 
+/* Class = "UITextField"; placeholder = "Ex. 100 000"; ObjectID = "Z5h-5z-gY2"; */
+"Z5h-5z-gY2.placeholder" = "Vd. 100 000 000";
+
+/* Class = "UILabel"; text = "Interest (%)"; ObjectID = "ZNP-a7-duW"; */
+"ZNP-a7-duW.text" = "Lãi suất (%)";
+
 /* Class = "UILabel"; text = "Annual income increases:  "; ObjectID = "a67-JL-3Hk"; */
 "a67-JL-3Hk.text" = "Thu nhập tăng hàng năm:  ";
 
 /* Class = "UILabel"; text = "Percent for savings:"; ObjectID = "ao1-mS-che"; */
-"ao1-mS-che.text" = "Phần trăm dành cho tiết kiệm:";
+"ao1-mS-che.text" = "Phần trăm cho tiết kiệm:";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "bRl-R0-zXm"; */
 "bRl-R0-zXm.text" = "Label";
 
 /* Class = "UITextField"; placeholder = "Ex. 10 000"; ObjectID = "ekd-aL-9Tw"; */
-"ekd-aL-9Tw.placeholder" = "Vd. 10 000";
+"ekd-aL-9Tw.placeholder" = "Vd. 1 000 000";
 
 /* Class = "UISegmentedControl"; fXf-Kk-8Fa.segmentTitles[0] = "Percent"; ObjectID = "fXf-Kk-8Fa"; */
 "fXf-Kk-8Fa.segmentTitles[0]" = "Phần trăm";
 
 /* Class = "UISegmentedControl"; fXf-Kk-8Fa.segmentTitles[1] = "Number"; ObjectID = "fXf-Kk-8Fa"; */
-"fXf-Kk-8Fa.segmentTitles[1]" = "Số tiền";
+"fXf-Kk-8Fa.segmentTitles[1]" = "Số";
+
+/* Class = "UITextField"; placeholder = "Ex. 20"; ObjectID = "fsd-lf-b0i"; */
+"fsd-lf-b0i.placeholder" = "Ex. 20";
 
 /* Class = "UIButton"; normalTitle = "5"; ObjectID = "h6I-PF-E8v"; */
 "h6I-PF-E8v.normalTitle" = "5";
@@ -169,6 +202,9 @@
 
 /* Class = "UIButton"; normalTitle = "x"; ObjectID = "ixf-rd-A0m"; */
 "ixf-rd-A0m.normalTitle" = "x";
+
+/* Class = "UIViewController"; title = "Result"; ObjectID = "jZy-XN-bZ2"; */
+"jZy-XN-bZ2.title" = "Kết quả";
 
 /* Class = "UILabel"; text = "%"; ObjectID = "jvV-Aa-SlK"; */
 "jvV-Aa-SlK.text" = "%";
@@ -183,7 +219,7 @@
 "nAu-lV-D34.normalTitle" = "7";
 
 /* Class = "UILabel"; text = "Money in the bank: "; ObjectID = "neF-cs-fJg"; */
-"neF-cs-fJg.text" = "Tiền trong ngân hàng: ";
+"neF-cs-fJg.text" = "Trong ngân hàng: ";
 
 /* Class = "UIButton"; normalTitle = "="; ObjectID = "nsC-W0-HF2"; */
 "nsC-W0-HF2.normalTitle" = "=";
@@ -191,11 +227,17 @@
 /* Class = "UILabel"; text = "%"; ObjectID = "pcF-da-m5l"; */
 "pcF-da-m5l.text" = "%";
 
+/* Class = "UIButton"; normalTitle = "Weekly"; ObjectID = "pcH-w5-qSB"; */
+"pcH-w5-qSB.normalTitle" = "Hàng tuần";
+
+/* Class = "UITabBarItem"; title = "Calculator"; ObjectID = "qYc-qU-gBN"; */
+"qYc-qU-gBN.title" = "Tính toán";
+
 /* Class = "UILabel"; text = "10000000000000"; ObjectID = "qt4-mI-oBk"; */
 "qt4-mI-oBk.text" = "10000000000000";
 
 /* Class = "UITextField"; placeholder = "Ex. 20 (% or num)"; ObjectID = "sBR-Gd-A3g"; */
-"sBR-Gd-A3g.placeholder" = "Ex. 20 (% or num)";
+"sBR-Gd-A3g.placeholder" = "Vd. 20 (% or số tiền)";
 
 /* Class = "UIButton"; normalTitle = "Change currency"; ObjectID = "sbg-ql-yFf"; */
 "sbg-ql-yFf.normalTitle" = "Đổi đơn vị";
@@ -213,13 +255,16 @@
 "t8m-xf-G5Q.text" = "Đơn vị tiền tệ";
 
 /* Class = "UILabel"; text = "First year earnings:  "; ObjectID = "u5X-CB-D7b"; */
-"u5X-CB-D7b.text" = "Thu nhập năm đầu tiên:  ";
+"u5X-CB-D7b.text" = "Thu nhập năm đầu:  ";
+
+/* Class = "UITextField"; placeholder = "Ex. 7"; ObjectID = "ucc-AI-3sb"; */
+"ucc-AI-3sb.placeholder" = "Vd. 7";
 
 /* Class = "UIButton"; normalTitle = "6"; ObjectID = "ujn-8P-hEC"; */
 "ujn-8P-hEC.normalTitle" = "6";
 
-/* Class = "UILabel"; text = "Result Total"; ObjectID = "vJn-sG-6Oa"; */
-"vJn-sG-6Oa.text" = "Kết quả tổng cộng";
+/* Class = "UILabel"; text = "Result"; ObjectID = "vfE-7m-6GU"; */
+"vfE-7m-6GU.text" = "Kết quả";
 
 /* Class = "UIButton"; normalTitle = "Show calculator"; ObjectID = "vjF-Ik-DXL"; */
 "vjF-Ik-DXL.normalTitle" = "Hiện máy tính";
@@ -228,10 +273,7 @@
 "xFA-3M-WYF.normalTitle" = "4";
 
 /* Class = "UIButton"; normalTitle = "Recent record"; ObjectID = "xlL-CX-QTM"; */
-"xlL-CX-QTM.normalTitle" = "Phiên làm việc trước";
-
-/* Class = "UILabel"; text = "Details"; ObjectID = "ylB-wz-qqM"; */
-"ylB-wz-qqM.text" = "Chi tiết";
+"xlL-CX-QTM.normalTitle" = "Bản ghi trước";
 
 /* Class = "UIButton"; normalTitle = "2"; ObjectID = "zWr-Zl-hQH"; */
 "zWr-Zl-hQH.normalTitle" = "2";

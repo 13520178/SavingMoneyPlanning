@@ -169,8 +169,11 @@ class InputViewController: UIViewController, UITextFieldDelegate, GADBannerViewD
         self.hideKeyboardWhenTappedAround()
         setUpUnpredictableToKeyboard()
         
+        
+        navigationController?.navigationBar.isTranslucent = false
+        
         bannerView.adSize = kGADAdSizeSmartBannerPortrait
-        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716"
+        bannerView.adUnitID = "ca-app-pub-9626752563546060/6460736189"
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         bannerView.delegate = self
@@ -179,55 +182,12 @@ class InputViewController: UIViewController, UITextFieldDelegate, GADBannerViewD
         firstYearEarningTextField.delegate = self
         
         viewFirst.layer.borderWidth = 1
-        viewFirst.layer.borderColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
+        viewFirst.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         
         viewSecond.layer.borderWidth = 1
-        viewSecond.layer.borderColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
+        viewSecond.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         
-        recentButton.layer.borderWidth = 1
-        recentButton.layer.borderColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
-        
-        currencyUnitTextField.layer.borderColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
-        currencyUnitTextField.layer.borderWidth = 1
-        currencyUnitTextField.layer.cornerRadius = 4
-        currencyUnitTextField.textColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
-        
-        yearsTextField.layer.borderColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
-        yearsTextField.layer.borderWidth = 1
-        yearsTextField.layer.cornerRadius = 4
-        yearsTextField.textColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
-        
-        annualIncomeTextField.layer.borderColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
-        annualIncomeTextField.layer.borderWidth = 1
-        annualIncomeTextField.layer.cornerRadius = 4
-        annualIncomeTextField.textColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
-        
-        bankInterestTextField.layer.borderColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
-        bankInterestTextField.layer.borderWidth = 1
-        bankInterestTextField.layer.cornerRadius = 4
-        bankInterestTextField.textColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
-        
-        amountAvailableTextField.layer.borderColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
-        amountAvailableTextField.layer.borderWidth = 1
-        amountAvailableTextField.layer.cornerRadius = 4
-        amountAvailableTextField.textColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
-        
-        firstYearEarningTextField.layer.borderColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
-        firstYearEarningTextField.layer.borderWidth = 1
-        firstYearEarningTextField.layer.cornerRadius = 4
-        firstYearEarningTextField.textColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
-        
-        currencyUnitTextField.layer.borderColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
-        currencyUnitTextField.layer.borderWidth = 1
-        currencyUnitTextField.layer.cornerRadius = 4
-        currencyUnitTextField.textColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
-        
-        percentageForSavingTextField.layer.borderColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
-        percentageForSavingTextField.layer.borderWidth = 1
-        percentageForSavingTextField.layer.cornerRadius = 4
-        percentageForSavingTextField.textColor = #colorLiteral(red: 0.4620226622, green: 0.8382837176, blue: 1, alpha: 1)
-        
-        
+
         
         if backFromTotal {
             currencyUnitTextField.text = caculate.currencyUnit
@@ -266,8 +226,8 @@ class InputViewController: UIViewController, UITextFieldDelegate, GADBannerViewD
                
                 let sumArray = averageNumbers.reduce(0, +)
                 let avgArrayValue = (sumArray / Double(averageNumbers.count)*100).rounded()/100
-                 avergaLabel.text = "Average percentage savings : \(avgArrayValue)%"
-                //
+                
+                avergaLabel.text = Tools.averagePercentSaving + "\(avgArrayValue)%"
             }
             
         }catch {}
@@ -276,23 +236,31 @@ class InputViewController: UIViewController, UITextFieldDelegate, GADBannerViewD
     }
     
     @IBAction func caculateResult(_ sender: UIButton) {
-        guard let amountAvailable = amountAvailableTextField.text,
+        guard var amountAvailable = amountAvailableTextField.text,
             amountAvailable != "",
-            let firstYearEarning = firstYearEarningTextField.text,
+            var firstYearEarning = firstYearEarningTextField.text,
             firstYearEarning != "",
-            let annualIncomeIcreases = annualIncomeTextField.text,
+            var annualIncomeIcreases = annualIncomeTextField.text,
             annualIncomeIcreases != "",
-            let percentOfIncomeForSaving = percentageForSavingTextField.text,
+            var percentOfIncomeForSaving = percentageForSavingTextField.text,
             percentOfIncomeForSaving != "",
             let years = yearsTextField.text,
             years != "",
             var currencyUnitValue = currencyUnitTextField.text,
-            let interest = bankInterestTextField.text,
+            var interest = bankInterestTextField.text,
             interest != ""
         else {
             AlertController.showAlert(inController: self, tilte: NSLocalizedString("Error", comment: "error"), message: NSLocalizedString("pleaseFill", comment: "Please Fill"))
             return
         }
+        
+        
+        firstYearEarning = Tools.replaceDotOrComma(string: firstYearEarning)
+        annualIncomeIcreases = Tools.replaceDotOrComma(string: annualIncomeIcreases)
+        percentOfIncomeForSaving = Tools.replaceDotOrComma(string: percentOfIncomeForSaving)
+        amountAvailable = Tools.replaceDotOrComma(string: amountAvailable)
+        interest = Tools.replaceDotOrComma(string: interest)
+        
         
         let firstYearEarningDouble:Double? = Double(Tools.replaceSpace(string: firstYearEarning))
         let annualIncomeIcreasesDbouble:Double? = Double(Tools.replaceSpace(string: annualIncomeIcreases))
@@ -300,6 +268,8 @@ class InputViewController: UIViewController, UITextFieldDelegate, GADBannerViewD
         let yearsInt:Int? = Int(Tools.replaceSpace(string: years))
         let amountAvailableDouble:Double? = Double(Tools.replaceSpace(string: amountAvailable))
         let interestDouble:Double? = Double(Tools.replaceSpace(string: interest))
+        
+        
         
         //Format the unit currency again
         if currencyUnitValue == ""{
@@ -359,19 +329,30 @@ class InputViewController: UIViewController, UITextFieldDelegate, GADBannerViewD
             PersitenceService.saveContext()
             averages.append(average)
         } else {
-             AlertController.showAlert(inController: self, tilte: "Input Error", message: "There may be a few errors during data entry")
+             AlertController.showAlert(inController: self, tilte: Tools.inputError, message: Tools.errorDuringDataEntry)
         }
       
     }
+    
+    @IBAction func refreshButtonPressed(_ sender: UIBarButtonItem) {
+        yearsTextField.text = ""
+        annualIncomeTextField.text = ""
+        currencyUnitTextField.text = ""
+        firstYearEarningTextField.text = ""
+        amountAvailableTextField.text = ""
+        percentageForSavingTextField.text = ""
+        bankInterestTextField.text = ""
+    }
+    
     
     
     @IBOutlet weak var showOrHideCaculatorButton: UIButton!
     @IBAction func showOrHideCaculator(_ sender: UIButton) {
         caculatorStackView.isHidden = !caculatorStackView.isHidden
         if !caculatorStackView.isHidden {
-            showOrHideCaculatorButton.setTitle("Hide calculator", for: .normal)
+            showOrHideCaculatorButton.setTitle(Tools.hideCalculator, for: .normal)
         }else {
-            showOrHideCaculatorButton.setTitle("Show calculator", for: .normal)
+            showOrHideCaculatorButton.setTitle(Tools.showCalculator, for: .normal)
         }
     }
     

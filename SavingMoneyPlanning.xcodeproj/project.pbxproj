@@ -12,6 +12,7 @@
 		1B2F6A6621368B3100835C3A /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2F6A6521368B3100835C3A /* AlertController.swift */; };
 		1B3311E52147DFBC00506FE6 /* Average+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3311E32147DFBC00506FE6 /* Average+CoreDataClass.swift */; };
 		1B3311E62147DFBC00506FE6 /* Average+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3311E42147DFBC00506FE6 /* Average+CoreDataProperties.swift */; };
+		1B41CA902323A41C0034ED28 /* CompoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B41CA8F2323A41C0034ED28 /* CompoundViewController.swift */; };
 		1B50E7C0215627BA00C03338 /* CaculateTheSavingMoney.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B50E7BD215627B900C03338 /* CaculateTheSavingMoney.swift */; };
 		1B50E7C1215627BA00C03338 /* PerYearSavingMoney.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B50E7BE215627B900C03338 /* PerYearSavingMoney.swift */; };
 		1B50E7C2215627BA00C03338 /* SavingMoney.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B50E7BF215627B900C03338 /* SavingMoney.swift */; };
@@ -20,6 +21,8 @@
 		1B74A7E12135371E00FC7C40 /* DetailTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B74A7E02135371E00FC7C40 /* DetailTableViewCell.swift */; };
 		1B74A7E42135590A00FC7C40 /* SavingMoneyPlanning.xcdatamodeld in Sources */ = {isa = PBXBuildFile; fileRef = 1B74A7E22135590A00FC7C40 /* SavingMoneyPlanning.xcdatamodeld */; };
 		1B74A7EA21355A7D00FC7C40 /* PersitenceService.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B74A7E921355A7D00FC7C40 /* PersitenceService.swift */; };
+		1B7E728B2329E5BE00954405 /* CompoundInterestModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E728A2329E5BE00954405 /* CompoundInterestModel.swift */; };
+		1B7E728F232A1CD700954405 /* TabBarController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B7E728E232A1CD700954405 /* TabBarController.swift */; };
 		1BA95610212FF28300DB2419 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA9560F212FF28300DB2419 /* AppDelegate.swift */; };
 		1BA95612212FF28300DB2419 /* InputViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1BA95611212FF28300DB2419 /* InputViewController.swift */; };
 		1BA95615212FF28300DB2419 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 1BA95613212FF28300DB2419 /* Main.storyboard */; };
@@ -30,14 +33,13 @@
 
 /* Begin PBXFileReference section */
 		188855EE2143FEC8000393EA /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
-		1B157C2622914DB500345E4B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		1B157C2822914DF100345E4B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
-		1B157C2A22914E1300345E4B /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Main.strings; sourceTree = "<group>"; };
 		1B157C2B22914E1400345E4B /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		1B157C2C22914E1400345E4B /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1B2F6A6521368B3100835C3A /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		1B3311E32147DFBC00506FE6 /* Average+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Average+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1B3311E42147DFBC00506FE6 /* Average+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Average+CoreDataProperties.swift"; sourceTree = "<group>"; };
+		1B41CA8F2323A41C0034ED28 /* CompoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompoundViewController.swift; sourceTree = "<group>"; };
 		1B50E7BD215627B900C03338 /* CaculateTheSavingMoney.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = CaculateTheSavingMoney.swift; sourceTree = "<group>"; };
 		1B50E7BE215627B900C03338 /* PerYearSavingMoney.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PerYearSavingMoney.swift; sourceTree = "<group>"; };
 		1B50E7BF215627B900C03338 /* SavingMoney.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SavingMoney.swift; sourceTree = "<group>"; };
@@ -46,6 +48,10 @@
 		1B74A7E02135371E00FC7C40 /* DetailTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DetailTableViewCell.swift; sourceTree = "<group>"; };
 		1B74A7E32135590A00FC7C40 /* SavingMoneyPlanning.xcdatamodel */ = {isa = PBXFileReference; lastKnownFileType = wrapper.xcdatamodel; path = SavingMoneyPlanning.xcdatamodel; sourceTree = "<group>"; };
 		1B74A7E921355A7D00FC7C40 /* PersitenceService.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PersitenceService.swift; sourceTree = "<group>"; };
+		1B7E728A2329E5BE00954405 /* CompoundInterestModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompoundInterestModel.swift; sourceTree = "<group>"; };
+		1B7E728E232A1CD700954405 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
+		1B7E7291232A2CFF00954405 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
+		1B7E7293232A2D0600954405 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Main.strings; sourceTree = "<group>"; };
 		1BA9560C212FF28300DB2419 /* SavingMoneyPlanning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SavingMoneyPlanning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BA9560F212FF28300DB2419 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BA95611212FF28300DB2419 /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
@@ -84,6 +90,7 @@
 				1B50E7BD215627B900C03338 /* CaculateTheSavingMoney.swift */,
 				1B50E7BE215627B900C03338 /* PerYearSavingMoney.swift */,
 				1B50E7BF215627B900C03338 /* SavingMoney.swift */,
+				1B7E728A2329E5BE00954405 /* CompoundInterestModel.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -94,6 +101,7 @@
 				1BA95611212FF28300DB2419 /* InputViewController.swift */,
 				1B561B2C213160B8005C4374 /* TotalResultViewController.swift */,
 				1B74A7DE2135313700FC7C40 /* DetailViewController.swift */,
+				1B41CA8F2323A41C0034ED28 /* CompoundViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -141,6 +149,7 @@
 				1B2297C72132A94F002900B4 /* Supporting Files */,
 				1B74A7E22135590A00FC7C40 /* SavingMoneyPlanning.xcdatamodeld */,
 				188855EE2143FEC8000393EA /* Tools.swift */,
+				1B7E728E232A1CD700954405 /* TabBarController.swift */,
 			);
 			path = SavingMoneyPlanning;
 			sourceTree = "<group>";
@@ -284,9 +293,12 @@
 				1B3311E52147DFBC00506FE6 /* Average+CoreDataClass.swift in Sources */,
 				1B74A7E42135590A00FC7C40 /* SavingMoneyPlanning.xcdatamodeld in Sources */,
 				1B561B2D213160B8005C4374 /* TotalResultViewController.swift in Sources */,
+				1B7E728F232A1CD700954405 /* TabBarController.swift in Sources */,
+				1B41CA902323A41C0034ED28 /* CompoundViewController.swift in Sources */,
 				1BA95612212FF28300DB2419 /* InputViewController.swift in Sources */,
 				1B50E7C0215627BA00C03338 /* CaculateTheSavingMoney.swift in Sources */,
 				1B50E7C2215627BA00C03338 /* SavingMoney.swift in Sources */,
+				1B7E728B2329E5BE00954405 /* CompoundInterestModel.swift in Sources */,
 				1B50E7C1215627BA00C03338 /* PerYearSavingMoney.swift in Sources */,
 				1B74A7EA21355A7D00FC7C40 /* PersitenceService.swift in Sources */,
 				188855EF2143FEC8000393EA /* Tools.swift in Sources */,
@@ -311,8 +323,8 @@
 			isa = PBXVariantGroup;
 			children = (
 				1BA95614212FF28300DB2419 /* Base */,
-				1B157C2622914DB500345E4B /* en */,
-				1B157C2A22914E1300345E4B /* vi */,
+				1B7E7291232A2CFF00954405 /* en */,
+				1B7E7293232A2D0600954405 /* vi */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
