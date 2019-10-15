@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  SavingMoneyPlanning
+
+  Created by Phan Nhat Dang on 5/19/19.
+  Copyright © 2019 Phan Nhat Dang. All rights reserved.
+*/
+
+"InputError" = "错误";
+"pleaseFill" = "请填写所有必填项";
+"percentOfIncome" = "存款占收入的百分比必须小于100";
+"stringDaily" = "每日";
+"stringWeekly" = "每周";
+"stringMonthly" = "每月";
+"stringQuarterly" = "每季度";
+"stringAnnually" = "每年";
+"averagePercentSaving" = "平均存款百分比: ";
+"inputError" = "输入错误";
+"errorDuringDataEntry" = "数据输入时可能出现一些错误";
+"hideCalculator" = "隐藏计算器";
+"showCalculator" = "显示计算器";
+"changeCurrency" = "更改货币";
+"enterTheConversionFactor" = "输入转换系数 (Ex. 100 or 1/100)";
+"error" = "错误";
+"pleaseFillCorrect" = "请用正确格式填写";
+"putWrongPlace" = "你把'/'放错地方了";
+

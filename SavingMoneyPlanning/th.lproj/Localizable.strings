@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  SavingMoneyPlanning
+
+  Created by Phan Nhat Dang on 5/19/19.
+  Copyright © 2019 Phan Nhat Dang. All rights reserved.
+*/
+
+"InputError" = "ความผิดพลาด";
+"pleaseFill" = "กรุณากรอกข้อมูลที่จำเป็นทั้งหมด";
+"percentOfIncome" = "ร้อยละของรายได้ที่ต้องบันทึกต้องน้อยกว่า 100";
+"stringDaily" = "รายจำวัน";
+"stringWeekly" = "รายสัปดาห์";
+"stringMonthly" = "รายเดือน";
+"stringQuarterly" = "ไตรมาส";
+"stringAnnually" = "รายปี";
+"averagePercentSaving" = "การออมเฉลี่ย: ";
+"inputError" = "ข้อผิดพลาดในการป้อนข้อมูล";
+"errorDuringDataEntry" = "อาจมีข้อผิดพลาดเล็กน้อยระหว่างการป้อนข้อมูล";
+"hideCalculator" = "ซ่อนเครื่องคิดเลข";
+"showCalculator" = "แสดงเครื่องคิดเลข";
+"changeCurrency" = "เปลี่ยนสกุลเงิน";
+"enterTheConversionFactor" = "ป้อนปัจจัยการแปลง (Ex. 100 or 1/100)";
+"error" = "ข้อผิดพลาด";
+"pleaseFillCorrect" = "กรุณากรอกข้อมูลให้ถูกต้อง";
+"putWrongPlace" = "คุณใส่ '/' ผิดตำแหน่ง";
+

@@ -36,6 +36,9 @@
 		1B157C2822914DF100345E4B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1B157C2B22914E1400345E4B /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		1B157C2C22914E1400345E4B /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
+		1B2DB7BF235479B1004BF788 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Main.strings"; sourceTree = "<group>"; };
+		1B2DB7C0235479B1004BF788 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
+		1B2DB7C1235479B1004BF788 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		1B2F6A6521368B3100835C3A /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
 		1B3311E32147DFBC00506FE6 /* Average+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Average+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1B3311E42147DFBC00506FE6 /* Average+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Average+CoreDataProperties.swift"; sourceTree = "<group>"; };
@@ -52,12 +55,18 @@
 		1B7E728E232A1CD700954405 /* TabBarController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = TabBarController.swift; sourceTree = "<group>"; };
 		1B7E7291232A2CFF00954405 /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Main.strings; sourceTree = "<group>"; };
 		1B7E7293232A2D0600954405 /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Main.strings; sourceTree = "<group>"; };
+		1B9C0058234EE3F60018D782 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/Main.strings; sourceTree = "<group>"; };
+		1B9C0059234EE3F70018D782 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		1B9C005A234EE3F70018D782 /* th */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = th; path = th.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1BA9560C212FF28300DB2419 /* SavingMoneyPlanning.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SavingMoneyPlanning.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		1BA9560F212FF28300DB2419 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
 		1BA95611212FF28300DB2419 /* InputViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = InputViewController.swift; sourceTree = "<group>"; };
 		1BA95614212FF28300DB2419 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		1BA95619212FF28400DB2419 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
 		1BA9561C212FF28400DB2419 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		1BAD740023559B6200582F2B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Main.strings; sourceTree = "<group>"; };
+		1BAD740123559B6300582F2B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
+		1BAD740223559B6300582F2B /* ru */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = ru; path = ru.lproj/Localizable.strings; sourceTree = "<group>"; };
 		61CDFE4F2540FB6B8D214FA2 /* Pods-SavingMoneyPlanning.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SavingMoneyPlanning.release.xcconfig"; path = "Pods/Target Support Files/Pods-SavingMoneyPlanning/Pods-SavingMoneyPlanning.release.xcconfig"; sourceTree = "<group>"; };
 		A765D7B8652CE9ED0A5ECDE2 /* Pods-SavingMoneyPlanning.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SavingMoneyPlanning.debug.xcconfig"; path = "Pods/Target Support Files/Pods-SavingMoneyPlanning/Pods-SavingMoneyPlanning.debug.xcconfig"; sourceTree = "<group>"; };
 		BB5F61E195C418F7EE22BF38 /* Pods_SavingMoneyPlanning.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SavingMoneyPlanning.framework; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -208,6 +217,9 @@
 				en,
 				Base,
 				vi,
+				th,
+				"zh-Hans",
+				ru,
 			);
 			mainGroup = 1BA95603212FF28300DB2419;
 			productRefGroup = 1BA9560D212FF28300DB2419 /* Products */;
@@ -315,6 +327,9 @@
 			children = (
 				1B157C2822914DF100345E4B /* en */,
 				1B157C2C22914E1400345E4B /* vi */,
+				1B9C005A234EE3F70018D782 /* th */,
+				1B2DB7C1235479B1004BF788 /* zh-Hans */,
+				1BAD740223559B6300582F2B /* ru */,
 			);
 			name = Localizable.strings;
 			sourceTree = "<group>";
@@ -325,6 +340,9 @@
 				1BA95614212FF28300DB2419 /* Base */,
 				1B7E7291232A2CFF00954405 /* en */,
 				1B7E7293232A2D0600954405 /* vi */,
+				1B9C0058234EE3F60018D782 /* th */,
+				1B2DB7BF235479B1004BF788 /* zh-Hans */,
+				1BAD740023559B6200582F2B /* ru */,
 			);
 			name = Main.storyboard;
 			sourceTree = "<group>";
@@ -334,6 +352,9 @@
 			children = (
 				1BA9561C212FF28400DB2419 /* Base */,
 				1B157C2B22914E1400345E4B /* vi */,
+				1B9C0059234EE3F70018D782 /* th */,
+				1B2DB7C0235479B1004BF788 /* zh-Hans */,
+				1BAD740123559B6300582F2B /* ru */,
 			);
 			name = LaunchScreen.storyboard;
 			sourceTree = "<group>";

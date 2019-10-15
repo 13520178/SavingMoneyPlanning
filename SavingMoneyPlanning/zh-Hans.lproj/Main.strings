@@ -3,7 +3,7 @@
 "0Qr-Tl-JZG.text" = "Sorry for the ad !";
 
 /* Class = "UIButton"; normalTitle = "Show details"; ObjectID = "2Qe-er-SdX"; */
-"2Qe-er-SdX.normalTitle" = "Show details";
+"2Qe-er-SdX.normalTitle" = "显示细节";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "4Ox-Bz-YhB"; */
 "4Ox-Bz-YhB.text" = "Label";
@@ -12,40 +12,40 @@
 "4n9-et-VVb.text" = "TotalTotalTotalTotalTotal";
 
 /* Class = "UILabel"; text = "Year: "; ObjectID = "6aN-hu-ksK"; */
-"6aN-hu-ksK.text" = "Year: ";
+"6aN-hu-ksK.text" = "年: ";
 
 /* Class = "UILabel"; text = "Years:  "; ObjectID = "6n5-Ic-zzW"; */
-"6n5-Ic-zzW.text" = "Years:  ";
+"6n5-Ic-zzW.text" = "年:  ";
 
 /* Class = "UIButton"; normalTitle = "3"; ObjectID = "7dx-kl-VFR"; */
 "7dx-kl-VFR.normalTitle" = "3";
 
-/* Class = "UILabel"; text = "TIme (years)"; ObjectID = "7q9-Y8-Y4S"; */
-"7q9-Y8-Y4S.text" = "Time (years)";
+/* Class = "UILabel"; text = "Time (years)"; ObjectID = "7q9-Y8-Y4S"; */
+"7q9-Y8-Y4S.text" = "时间（年";
 
 /* Class = "UILabel"; text = "First year earnings"; ObjectID = "8ea-KR-bYg"; */
-"8ea-KR-bYg.text" = "First year earnings";
+"8ea-KR-bYg.text" = "第一年收入";
 
 /* Class = "UILabel"; text = "10000000000000"; ObjectID = "8fc-hF-JvT"; */
 "8fc-hF-JvT.text" = "10000000000000";
 
 /* Class = "UILabel"; text = "(Average percentage savings : 20%)"; ObjectID = "8yq-pV-AmJ"; */
-"8yq-pV-AmJ.text" = "(Average percentage savings : 20%)";
+"8yq-pV-AmJ.text" = "(平均存款百分比：20%)";
 
 /* Class = "UILabel"; text = "(Because in the last year you have not received interest from the bank)"; ObjectID = "9g5-f5-xxq"; */
-"9g5-f5-xxq.text" = "(Because in the last year you have not received interest from the bank)";
+"9g5-f5-xxq.text" = "(因为去年你还没有收到银行的利息)";
 
 /* Class = "UIButton"; normalTitle = "9"; ObjectID = "BcU-0z-nBj"; */
 "BcU-0z-nBj.normalTitle" = "9";
 
 /* Class = "UINavigationItem"; title = "Other formula"; ObjectID = "Bee-vQ-MtD"; */
-"Bee-vQ-MtD.title" = "Other formula";
+"Bee-vQ-MtD.title" = "其他公式";
 
 /* Class = "UILabel"; text = "0"; ObjectID = "CNA-zu-2FG"; */
 "CNA-zu-2FG.text" = "0";
 
 /* Class = "UILabel"; text = "Annual income increases"; ObjectID = "CaS-wH-YJ7"; */
-"CaS-wH-YJ7.text" = "Annual income increases";
+"CaS-wH-YJ7.text" = "年收入增长";
 
 /* Class = "UILabel"; text = "10000000000000"; ObjectID = "D0r-tH-w8D"; */
 "D0r-tH-w8D.text" = "10000000000000";
@@ -57,82 +57,82 @@
 "Dde-Mc-EwY.placeholder" = "20";
 
 /* Class = "UILabel"; text = "Compound"; ObjectID = "EMM-wC-UQy"; */
-"EMM-wC-UQy.text" = "Compound interval";
+"EMM-wC-UQy.text" = "复合区间";
 
 /* Class = "UINavigationItem"; title = "Savings"; ObjectID = "Evs-0R-aMm"; */
-"Evs-0R-aMm.title" = "Savings";
+"Evs-0R-aMm.title" = "存款";
 
 /* Class = "UITextField"; placeholder = "Ex. 50 000"; ObjectID = "FLq-Ji-3RA"; */
 "FLq-Ji-3RA.placeholder" = "Ex. 50 000";
 
 /* Class = "UILabel"; text = "Total in the bank:  "; ObjectID = "Fe2-el-pbK"; */
-"Fe2-el-pbK.text" = "Total in the bank:  ";
+"Fe2-el-pbK.text" = "银行存款总额:";
 
 /* Class = "UILabel"; text = "Saving money:"; ObjectID = "Gmo-x5-KBp"; */
-"Gmo-x5-KBp.text" = "Saving money:";
+"Gmo-x5-KBp.text" = "省钱:";
 
 /* Class = "UIButton"; normalTitle = "0"; ObjectID = "GuZ-lA-LYd"; */
 "GuZ-lA-LYd.normalTitle" = "0";
 
 /* Class = "UILabel"; text = "Total in the bank:  "; ObjectID = "H5L-3f-ufi"; */
-"H5L-3f-ufi.text" = "Total in the bank:  ";
+"H5L-3f-ufi.text" = "银行存款总额:";
 
 /* Class = "UILabel"; text = "Total in the bank:  "; ObjectID = "HjJ-6B-eW2"; */
-"HjJ-6B-eW2.text" = "Total in the bank:  ";
+"HjJ-6B-eW2.text" = "银行存款总额:";
 
 /* Class = "UILabel"; text = "Percent of income for savings"; ObjectID = "I5S-D4-MFb"; */
-"I5S-D4-MFb.text" = "Percent of income for savings";
+"I5S-D4-MFb.text" = "专用于储蓄的收入百分比";
 
 /* Class = "UIViewController"; title = "Details"; ObjectID = "JM3-80-9ea"; */
-"JM3-80-9ea.title" = "Details";
+"JM3-80-9ea.title" = "细节";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "LUm-cT-8Yp"; */
 "LUm-cT-8Yp.text" = "Label";
 
 /* Class = "UILabel"; text = "Interest rate:  "; ObjectID = "Luu-Vz-sjh"; */
-"Luu-Vz-sjh.text" = "Interest rate:  ";
+"Luu-Vz-sjh.text" = "利息率:";
 
 /* Class = "UILabel"; text = "Initial amount:"; ObjectID = "M55-gB-Gs4"; */
-"M55-gB-Gs4.text" = "Initial amount:";
+"M55-gB-Gs4.text" = "初始金额:";
 
 /* Class = "UIButton"; normalTitle = "8"; ObjectID = "MDo-Lq-sUW"; */
 "MDo-Lq-sUW.normalTitle" = "8";
 
 /* Class = "UILabel"; text = "Income:"; ObjectID = "MNB-D0-KjV"; */
-"MNB-D0-KjV.text" = "Income:";
+"MNB-D0-KjV.text" = "收入:";
 
 /* Class = "UILabel"; text = "Initial amount"; ObjectID = "NHk-v0-FDx"; */
-"NHk-v0-FDx.text" = "Initial amount";
+"NHk-v0-FDx.text" = "初始金额";
 
 /* Class = "UILabel"; text = "Currency unit:  "; ObjectID = "Nao-ws-d1Q"; */
-"Nao-ws-d1Q.text" = "Currency unit:  ";
+"Nao-ws-d1Q.text" = "货币单位:";
 
 /* Class = "UILabel"; text = "10000000000000"; ObjectID = "OWb-oV-Qrc"; */
 "OWb-oV-Qrc.text" = "10000000000000";
 
 /* Class = "UITabBarItem"; title = "Other"; ObjectID = "Ozd-MQ-Bj3"; */
-"Ozd-MQ-Bj3.title" = "Other";
+"Ozd-MQ-Bj3.title" = "其他";
 
 /* Class = "UILabel"; text = "Years"; ObjectID = "Q8D-9S-3Pm"; */
-"Q8D-9S-3Pm.text" = "Years";
+"Q8D-9S-3Pm.text" = "年";
 
 /* Class = "UILabel"; text = "Principal"; ObjectID = "QHQ-1G-nIT"; */
-"QHQ-1G-nIT.text" = "Principal";
+"QHQ-1G-nIT.text" = "本金";
 
 /* Class = "UIButton"; normalTitle = "1"; ObjectID = "Qke-de-vlU"; */
 "Qke-de-vlU.normalTitle" = "1";
 
 /* Class = "UIButton"; normalTitle = "Calculate"; ObjectID = "Rt4-Bb-oa3"; */
-"Rt4-Bb-oa3.normalTitle" = "Calculate";
+"Rt4-Bb-oa3.normalTitle" = "计算";
 
 /* Class = "UILabel"; text = "Last year savings:"; ObjectID = "Snc-Iw-VeY"; */
-"Snc-Iw-VeY.text" = "Last year savings:";
+"Snc-Iw-VeY.text" = "去年存款:";
 
 /* Class = "UILabel"; text = "Total in the bank:"; ObjectID = "T3U-sF-DMp"; */
-"T3U-sF-DMp.text" = "Total in the bank:";
+"T3U-sF-DMp.text" = "银行存款总额:";
 
 /* Class = "UILabel"; text = "TOTAL SAVINGS "; ObjectID = "TxU-Yq-SmJ"; */
-"TxU-Yq-SmJ.text" = "TOTAL SAVINGS ";
+"TxU-Yq-SmJ.text" = "总存款";
 
 /* Class = "UILabel"; text = " "; ObjectID = "VYL-TG-JmK"; */
 "VYL-TG-JmK.text" = " ";
@@ -144,13 +144,13 @@
 "W2z-gr-PTs.text" = "Label";
 
 /* Class = "UILabel"; text = "Spending money: "; ObjectID = "WY5-6z-rOu"; */
-"WY5-6z-rOu.text" = "Spending money: ";
+"WY5-6z-rOu.text" = "花钱:";
 
 /* Class = "UIButton"; normalTitle = "Calculate"; ObjectID = "WYl-4x-cHa"; */
-"WYl-4x-cHa.normalTitle" = "Calculate";
+"WYl-4x-cHa.normalTitle" = "计算";
 
 /* Class = "UIButton"; normalTitle = "More detail formula"; ObjectID = "WzB-Oo-bfn"; */
-"WzB-Oo-bfn.normalTitle" = "More detail formula";
+"WzB-Oo-bfn.normalTitle" = "更多细节公式";
 
 /* Class = "UIButton"; normalTitle = "/"; ObjectID = "X8E-FY-tYz"; */
 "X8E-FY-tYz.normalTitle" = "/";
@@ -171,13 +171,13 @@
 "Z5h-5z-gY2.placeholder" = "Ex. 100 000";
 
 /* Class = "UILabel"; text = "Interest (%)"; ObjectID = "ZNP-a7-duW"; */
-"ZNP-a7-duW.text" = "Interest (%)";
+"ZNP-a7-duW.text" = "利息率 (%)";
 
 /* Class = "UILabel"; text = "Annual income increases:  "; ObjectID = "a67-JL-3Hk"; */
-"a67-JL-3Hk.text" = "Annual income increases:  ";
+"a67-JL-3Hk.text" = "年收入增长: ";
 
 /* Class = "UILabel"; text = "Percent for savings:"; ObjectID = "ao1-mS-che"; */
-"ao1-mS-che.text" = "Percent for savings:";
+"ao1-mS-che.text" = "存款的百分比 :";
 
 /* Class = "UILabel"; text = "Label"; ObjectID = "bRl-R0-zXm"; */
 "bRl-R0-zXm.text" = "Label";
@@ -186,10 +186,10 @@
 "ekd-aL-9Tw.placeholder" = "Ex. 10 000";
 
 /* Class = "UISegmentedControl"; fXf-Kk-8Fa.segmentTitles[0] = "Percent"; ObjectID = "fXf-Kk-8Fa"; */
-"fXf-Kk-8Fa.segmentTitles[0]" = "Percent";
+"fXf-Kk-8Fa.segmentTitles[0]" = "百分比";
 
 /* Class = "UISegmentedControl"; fXf-Kk-8Fa.segmentTitles[1] = "Number"; ObjectID = "fXf-Kk-8Fa"; */
-"fXf-Kk-8Fa.segmentTitles[1]" = "Number";
+"fXf-Kk-8Fa.segmentTitles[1]" = "数字";
 
 /* Class = "UITextField"; placeholder = "Ex. 20"; ObjectID = "fsd-lf-b0i"; */
 "fsd-lf-b0i.placeholder" = "Ex. 20";
@@ -198,13 +198,13 @@
 "h6I-PF-E8v.normalTitle" = "5";
 
 /* Class = "UILabel"; text = "Interest rate"; ObjectID = "ikb-CC-Bfh"; */
-"ikb-CC-Bfh.text" = "Interest rate";
+"ikb-CC-Bfh.text" = "利息率";
 
 /* Class = "UIButton"; normalTitle = "x"; ObjectID = "ixf-rd-A0m"; */
 "ixf-rd-A0m.normalTitle" = "x";
 
 /* Class = "UIViewController"; title = "Result"; ObjectID = "jZy-XN-bZ2"; */
-"jZy-XN-bZ2.title" = "Result";
+"jZy-XN-bZ2.title" = "结果";
 
 /* Class = "UILabel"; text = "%"; ObjectID = "jvV-Aa-SlK"; */
 "jvV-Aa-SlK.text" = "%";
@@ -219,7 +219,7 @@
 "nAu-lV-D34.normalTitle" = "7";
 
 /* Class = "UILabel"; text = "Money in the bank: "; ObjectID = "neF-cs-fJg"; */
-"neF-cs-fJg.text" = "Money in the bank: ";
+"neF-cs-fJg.text" = "银行中的资金:";
 
 /* Class = "UIButton"; normalTitle = "="; ObjectID = "nsC-W0-HF2"; */
 "nsC-W0-HF2.normalTitle" = "=";
@@ -228,10 +228,10 @@
 "pcF-da-m5l.text" = "%";
 
 /* Class = "UIButton"; normalTitle = "Weekly"; ObjectID = "pcH-w5-qSB"; */
-"pcH-w5-qSB.normalTitle" = "Weekly";
+"pcH-w5-qSB.normalTitle" = "每周";
 
 /* Class = "UITabBarItem"; title = "Calculator"; ObjectID = "qYc-qU-gBN"; */
-"qYc-qU-gBN.title" = "Calculator";
+"qYc-qU-gBN.title" = "计算器";
 
 /* Class = "UILabel"; text = "10000000000000"; ObjectID = "qt4-mI-oBk"; */
 "qt4-mI-oBk.text" = "10000000000000";
@@ -240,10 +240,10 @@
 "sBR-Gd-A3g.placeholder" = "Ex. 20 (% or num)";
 
 /* Class = "UIButton"; normalTitle = "Change currency"; ObjectID = "sbg-ql-yFf"; */
-"sbg-ql-yFf.normalTitle" = "Change currency";
+"sbg-ql-yFf.normalTitle" = "更改货币";
 
 /* Class = "UILabel"; text = "Total savings: "; ObjectID = "sn0-iH-9TP"; */
-"sn0-iH-9TP.text" = "Total savings: ";
+"sn0-iH-9TP.text" = "总存款: ";
 
 /* Class = "UIButton"; normalTitle = "-"; ObjectID = "sqy-dI-GpH"; */
 "sqy-dI-GpH.normalTitle" = "-";
@@ -252,10 +252,10 @@
 "t7D-9G-k2C.text" = "10000000000000";
 
 /* Class = "UILabel"; text = "Currency unit"; ObjectID = "t8m-xf-G5Q"; */
-"t8m-xf-G5Q.text" = "Currency unit";
+"t8m-xf-G5Q.text" = "货币单位";
 
 /* Class = "UILabel"; text = "First year earnings:  "; ObjectID = "u5X-CB-D7b"; */
-"u5X-CB-D7b.text" = "First year earnings:  ";
+"u5X-CB-D7b.text" = "第一年收入:";
 
 /* Class = "UITextField"; placeholder = "Ex. 7"; ObjectID = "ucc-AI-3sb"; */
 "ucc-AI-3sb.placeholder" = "Ex. 7";
@@ -264,16 +264,16 @@
 "ujn-8P-hEC.normalTitle" = "6";
 
 /* Class = "UILabel"; text = "Result"; ObjectID = "vfE-7m-6GU"; */
-"vfE-7m-6GU.text" = "Result";
+"vfE-7m-6GU.text" = "结果";
 
 /* Class = "UIButton"; normalTitle = "Show calculator"; ObjectID = "vjF-Ik-DXL"; */
-"vjF-Ik-DXL.normalTitle" = "Show calculator";
+"vjF-Ik-DXL.normalTitle" = "显示计算器";
 
 /* Class = "UIButton"; normalTitle = "4"; ObjectID = "xFA-3M-WYF"; */
 "xFA-3M-WYF.normalTitle" = "4";
 
 /* Class = "UIButton"; normalTitle = "Recent record"; ObjectID = "xlL-CX-QTM"; */
-"xlL-CX-QTM.normalTitle" = "Recent record";
+"xlL-CX-QTM.normalTitle" = "最近记录";
 
 /* Class = "UIButton"; normalTitle = "2"; ObjectID = "zWr-Zl-hQH"; */
 "zWr-Zl-hQH.normalTitle" = "2";

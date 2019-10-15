@@ -23,5 +23,5 @@
 "enterTheConversionFactor" = "Enter the conversion factor (Ex. 100 or 1/100)";
 "error" = "Error";
 "pleaseFillCorrect" = "Please fill in the correct format";
-"putWrongPlace" = "You put the '/' wrong place";
+"putWrongPlace" = "You put '/' in the wrong place";
 

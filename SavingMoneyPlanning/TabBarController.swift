@@ -20,6 +20,8 @@ class TabBarController: UITabBarController {
         tabBarItems[1].title = nil
         tabBarItems[1].imageInsets = UIEdgeInsets(top: 6,left: 0,bottom: -6,right: 0)
         
+        
+        
     }
     
 

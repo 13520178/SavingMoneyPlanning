@@ -1,0 +1,27 @@
+/* 
+  Localizable.strings
+  SavingMoneyPlanning
+
+  Created by Phan Nhat Dang on 5/19/19.
+  Copyright © 2019 Phan Nhat Dang. All rights reserved.
+*/
+
+"InputError" = "ошибка";
+"pleaseFill" = "Пожалуйста, заполните все обязательные поля";
+"percentOfIncome" = "Процент сохраняемого дохода должен быть менее 100";
+"stringDaily" = "Повседневная";
+"stringWeekly" = "еженедельно";
+"stringMonthly" = "ежемесячно";
+"stringQuarterly" = "квартальный";
+"stringAnnually" = "ежегодно";
+"averagePercentSaving" = "Средний процент экономии: ";
+"inputError" = "Ошибка ввода";
+"errorDuringDataEntry" = "При вводе данных может быть несколько ошибок";
+"hideCalculator" = "Скрыть калькулятор";
+"showCalculator" = "Показать калькулятор";
+"changeCurrency" = "Изменить валюту";
+"enterTheConversionFactor" = "Введите коэффициент пересчета (Ex. 100 or 1/100)";
+"error" = "ошибка";
+"pleaseFillCorrect" = "Пожалуйста, заполните правильный формат";
+"putWrongPlace" = "Вы поставили «/» в неправильном месте";
+

@@ -63,7 +63,7 @@ class TotalResultViewController: UIViewController {
 
     
     @IBAction func conver(_ sender: UIButton) {
-        let alertController = UIAlertController(title: Tools.changeCurrency, message: "Enter the conversion factor (Ex. 100 or 1/100)", preferredStyle: .alert)
+        let alertController = UIAlertController(title: Tools.changeCurrency, message: Tools.enterTheConversionFactor, preferredStyle: .alert)
         alertController.addTextField(configurationHandler: exchangeTF)
         
         let okAction = UIAlertAction(title: "OK", style: .default, handler: self.okHandler)
@@ -143,9 +143,6 @@ class TotalResultViewController: UIViewController {
         }
     }
     
-   
-    
-   
     override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
         if segue.identifier == "showDetails" {
             if let destination = segue.destination as? DetailViewController {
