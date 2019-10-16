@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  SavingMoneyPlanning
+
+  Created by Phan Nhat Dang on 10/16/19.
+  Copyright © 2019 Phan Nhat Dang. All rights reserved.
+*/
+
+"CFBundleDisplayName" = "复利 , 省钱 , 计划从银行存款中致富";
+"CFBundleName" = "复利 , 省钱 , 计划从银行存款中致富";

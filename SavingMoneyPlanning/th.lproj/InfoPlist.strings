@@ -1,0 +1,10 @@
+/* 
+  InfoPlist.strings
+  SavingMoneyPlanning
+
+  Created by Phan Nhat Dang on 10/16/19.
+  Copyright © 2019 Phan Nhat Dang. All rights reserved.
+*/
+
+"CFBundleDisplayName" = "ดอกเบี้ยทบต้น, ออมเงิน, วางแผน";
+"CFBundleName" = "ดอกเบี้ยทบต้น, ออมเงิน, วางแผน";

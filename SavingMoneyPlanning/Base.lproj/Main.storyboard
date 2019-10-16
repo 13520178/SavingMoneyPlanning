@@ -20,10 +20,10 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="9rd-FB-wfX" customClass="GADBannerView">
-                                <rect key="frame" x="0.0" y="554" width="375" height="0.0"/>
+                                <rect key="frame" x="0.0" y="504" width="375" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry for the ad !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="0Qr-Tl-JZG">
-                                        <rect key="frame" x="123" y="-10" width="129" height="20.5"/>
+                                        <rect key="frame" x="123" y="15" width="129" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.56862745100000001" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -36,7 +36,7 @@
                                 </constraints>
                             </view>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="wCM-66-BFC">
-                                <rect key="frame" x="0.0" y="0.0" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="0.0" width="375" height="504"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="5Y8-qy-g8F">
                                         <rect key="frame" x="0.0" y="0.0" width="375" height="600"/>
@@ -306,7 +306,7 @@
                             <constraint firstItem="wCM-66-BFC" firstAttribute="top" secondItem="hwS-41-Gq9" secondAttribute="top" id="P2R-SU-g42"/>
                             <constraint firstItem="hwS-41-Gq9" firstAttribute="trailing" secondItem="9rd-FB-wfX" secondAttribute="trailing" id="Un8-gO-wIu"/>
                             <constraint firstItem="5Y8-qy-g8F" firstAttribute="width" secondItem="CHk-U9-rGo" secondAttribute="width" id="VU8-bK-46u"/>
-                            <constraint firstItem="hwS-41-Gq9" firstAttribute="bottom" secondItem="wCM-66-BFC" secondAttribute="bottom" id="Xi7-Jo-gUg"/>
+                            <constraint firstItem="hwS-41-Gq9" firstAttribute="bottom" secondItem="wCM-66-BFC" secondAttribute="bottom" constant="50" id="Xi7-Jo-gUg"/>
                             <constraint firstItem="9rd-FB-wfX" firstAttribute="top" secondItem="wCM-66-BFC" secondAttribute="bottom" id="hEE-vR-J8R"/>
                         </constraints>
                         <viewLayoutGuide key="safeArea" id="hwS-41-Gq9"/>
@@ -344,7 +344,7 @@
                         <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
                         <subviews>
                             <scrollView clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="K1u-g5-25E">
-                                <rect key="frame" x="0.0" y="64" width="375" height="554"/>
+                                <rect key="frame" x="0.0" y="64" width="375" height="504"/>
                                 <subviews>
                                     <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="oNh-fT-i3U" userLabel="MainView">
                                         <rect key="frame" x="0.0" y="-1" width="375" height="520"/>
@@ -1003,10 +1003,10 @@
                                 </constraints>
                             </scrollView>
                             <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="7jT-vW-X6O" customClass="GADBannerView">
-                                <rect key="frame" x="0.0" y="618" width="375" height="0.0"/>
+                                <rect key="frame" x="0.0" y="568" width="375" height="50"/>
                                 <subviews>
                                     <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Sorry for the ad !" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Y3W-dC-vR7">
-                                        <rect key="frame" x="123" y="-10" width="129" height="20.5"/>
+                                        <rect key="frame" x="123" y="15" width="129" height="20.5"/>
                                         <fontDescription key="fontDescription" type="system" pointSize="17"/>
                                         <color key="textColor" red="0.0" green="0.56862745100000001" blue="0.57647058819999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                         <nil key="highlightedColor"/>
@@ -1015,7 +1015,7 @@
                                 <color key="backgroundColor" red="0.83216959239999999" green="0.98548370600000001" blue="0.47333085539999997" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                 <constraints>
                                     <constraint firstItem="Y3W-dC-vR7" firstAttribute="centerX" secondItem="7jT-vW-X6O" secondAttribute="centerX" id="7FC-Ag-YmE"/>
-                                    <constraint firstAttribute="height" id="Dnc-fg-NN5"/>
+                                    <constraint firstAttribute="height" constant="50" id="Dnc-fg-NN5"/>
                                     <constraint firstItem="Y3W-dC-vR7" firstAttribute="centerY" secondItem="7jT-vW-X6O" secondAttribute="centerY" id="x5l-7i-nuy"/>
                                 </constraints>
                             </view>
