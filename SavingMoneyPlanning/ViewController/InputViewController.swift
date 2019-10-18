@@ -236,6 +236,7 @@ class InputViewController: UIViewController, UITextFieldDelegate, GADBannerViewD
     }
     
     @IBAction func caculateResult(_ sender: UIButton) {
+        caculate = CaculateTheSavingMoney()
         guard var amountAvailable = amountAvailableTextField.text,
             amountAvailable != "",
             var firstYearEarning = firstYearEarningTextField.text,
