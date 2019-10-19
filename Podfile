@@ -7,4 +7,5 @@ target 'SavingMoneyPlanning' do
 
   # Pods for SavingMoneyPlanning
     pod 'Google-Mobile-Ads-SDK'
+    pod 'Charts'
 end

@@ -7,10 +7,12 @@
 //
 
 import UIKit
+import Charts
 
 class TotalResultViewController: UIViewController {
 
     
+    @IBOutlet weak var pieView: PieChartView!
     @IBOutlet weak var currencyUnitLabel: UILabel!
     @IBOutlet weak var amountAvailable: UILabel!
     @IBOutlet weak var firstYearEarnings: UILabel!
@@ -21,6 +23,8 @@ class TotalResultViewController: UIViewController {
     @IBOutlet weak var totalInBankLabel: UILabel!
     @IBOutlet weak var lastYearSavingMoneyLabel: UILabel!
     @IBOutlet weak var totalLabel: UILabel!
+    @IBOutlet weak var totalDepositLabel: UILabel!
+    @IBOutlet weak var totalInterestLabel: UILabel!
     
 
     @IBOutlet weak var firstView: UIView!
@@ -78,7 +82,61 @@ class TotalResultViewController: UIViewController {
         print("Percent deposit: \(dataForChart.percentDeposit)%")
         print("Percent interest: \(dataForChart.percentInterest)%")
         
+        totalDepositLabel.text = (Tools.changeToCurrency(moneyStr: String(dataForChart.totalDeposit)) ?? "0") + " " + String(caculate.currencyUnit)
+        totalInterestLabel.text = (Tools.changeToCurrency(moneyStr: String(dataForChart.totalInterest)) ?? "0") + " " + String(caculate.currencyUnit)
+        
+        setupPieChart(depositValue: dataForChart.totalDeposit, interestValue: dataForChart.totalInterest)
+        
        
+    }
+    
+    func setupPieChart(depositValue:Double, interestValue:Double) {
+        pieView.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
+        
+        
+        var entries: [PieChartDataEntry] = Array()
+        entries.append(PieChartDataEntry(value: depositValue, label: "Deposit"))
+        entries.append(PieChartDataEntry(value: interestValue, label: "Interest"))
+        
+        let dataSet = PieChartDataSet(entries: entries,label: "")
+        
+        dataSet.colors = [#colorLiteral(red: 0.9215686275, green: 0.4392156863, blue: 0.4392156863, alpha: 1),#colorLiteral(red: 0.3921568627, green: 0.8862745098, blue: 0.568627451, alpha: 1)]
+        dataSet.drawValuesEnabled = true
+    
+        dataSet.sliceSpace = 2.0
+        
+
+        pieView.usePercentValuesEnabled = true
+        pieView.drawSlicesUnderHoleEnabled = false
+        pieView.holeRadiusPercent = 0.40
+        pieView.transparentCircleRadiusPercent = 0.43
+        pieView.drawHoleEnabled = true
+        pieView.rotationAngle = 0.0
+        pieView.rotationEnabled = true
+        pieView.highlightPerTapEnabled = false
+        
+        let pieChartLegend = pieView.legend
+        pieChartLegend.horizontalAlignment = Legend.HorizontalAlignment.right
+        pieChartLegend.verticalAlignment = Legend.VerticalAlignment.top
+        pieChartLegend.orientation = Legend.Orientation.vertical
+        pieChartLegend.drawInside = false
+        pieChartLegend.yOffset = 10.0
+        
+        pieView.legend.enabled = true
+        
+        let formatter = NumberFormatter()
+        formatter.numberStyle = .percent
+        formatter.maximumFractionDigits = 1
+        formatter.multiplier = 1.0
+       
+        
+        let pieChartData = PieChartData(dataSet: dataSet)
+        pieChartData.setValueFormatter(DefaultValueFormatter(formatter:formatter))
+        
+        pieView.data = pieChartData
+        
+        
+        
     }
 
     
@@ -177,3 +235,5 @@ class TotalResultViewController: UIViewController {
         }
     }
 }
+
+
