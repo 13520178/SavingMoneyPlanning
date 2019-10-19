@@ -69,7 +69,7 @@ class TotalResultViewController: UIViewController {
         dataForChart.percentInterest = (dataForChart.totalInterest/total)*100
         dataForChart.percentInterest = (dataForChart.percentInterest*100).rounded()/100
         
-        dataForChart.percentDeposit = 100 - dataForChart.percentInterest
+        dataForChart.percentDeposit = ((100 - dataForChart.percentInterest)*100).rounded()/100
         
         
         print("Total: \(total)")
