@@ -31,6 +31,8 @@ class TotalResultViewController: UIViewController {
     var total = Double()
     var change = Double ()
     var exchangeTF = UITextField()
+    var dataForChart = PercentForPieChart()
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         
@@ -57,7 +59,25 @@ class TotalResultViewController: UIViewController {
         lastYearSavingMoneyLabel.text = Tools.changeToCurrency(moneyStr: (String((savingMoneyPerYear.last!.money*100).rounded()/100)))! + " " + String(caculate.currencyUnit)
         total = ((bankMoneyPerYear.last! + savingMoneyPerYear.last!.money) * 100).rounded()/100
         totalLabel.text = Tools.changeToCurrency(moneyStr:String(total) )! + " " + String(caculate.currencyUnit)
-
+        
+        //Charts
+        
+        dataForChart = PercentForPieChart(initial: caculate.amountAvailable, firstYear: caculate.moneySavingPerYear.firstYearEarning, incomeIncrease: caculate.moneySavingPerYear.annualIncomeIcreases, isPercent: caculate.moneySavingPerYear.isPercent, years: caculate.moneySavingPerYear.years, percentForSaving: caculate.moneySavingPerYear.percentOfIncomeForSaving)
+        
+        dataForChart.totalInterest = ((total - dataForChart.totalDeposit)*100).rounded()/100
+        
+        dataForChart.percentInterest = (dataForChart.totalInterest/total)*100
+        dataForChart.percentInterest = (dataForChart.percentInterest*100).rounded()/100
+        
+        dataForChart.percentDeposit = 100 - dataForChart.percentInterest
+        
+        
+        print("Total: \(total)")
+        print("Total deposit: \(dataForChart.totalDeposit)")
+        print("Total interest: \(dataForChart.totalInterest)")
+        print("Percent deposit: \(dataForChart.percentDeposit)%")
+        print("Percent interest: \(dataForChart.percentInterest)%")
+        
        
     }
 

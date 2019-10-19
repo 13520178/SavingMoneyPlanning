@@ -42,7 +42,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SavingMoneyPlanning/Model/CaculateTheSavingMoney.swift"
-            timestampString = "592118237.0584"
+            timestampString = "593097187.032329"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "19"
@@ -58,7 +58,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SavingMoneyPlanning/Model/CaculateTheSavingMoney.swift"
-            timestampString = "592118237.058576"
+            timestampString = "593097187.032425"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "21"
@@ -74,7 +74,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SavingMoneyPlanning/Model/CaculateTheSavingMoney.swift"
-            timestampString = "592118237.058694"
+            timestampString = "593097187.032501"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "20"
@@ -90,7 +90,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SavingMoneyPlanning/ViewController/TotalResultViewController.swift"
-            timestampString = "592747104.532511"
+            timestampString = "593151907.199003"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "25"
@@ -168,7 +168,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SavingMoneyPlanning/ViewController/TotalResultViewController.swift"
-            timestampString = "592747104.533169"
+            timestampString = "593151907.199972"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "32"
@@ -184,7 +184,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SavingMoneyPlanning/ViewController/InputViewController.swift"
-            timestampString = "593095352.83834"
+            timestampString = "593151907.2006299"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "209"
@@ -200,7 +200,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SavingMoneyPlanning/ViewController/InputViewController.swift"
-            timestampString = "593095352.838811"
+            timestampString = "593151907.200734"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "215"
@@ -216,11 +216,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SavingMoneyPlanning/ViewController/TotalResultViewController.swift"
-            timestampString = "592747104.5337549"
+            timestampString = "593151907.20082"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
+            startingLineNumber = "86"
+            endingLineNumber = "86"
             landmarkName = "conver(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -232,11 +232,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SavingMoneyPlanning/ViewController/TotalResultViewController.swift"
-            timestampString = "592747104.534265"
+            timestampString = "593151907.201403"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "90"
-            endingLineNumber = "90"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
             landmarkName = "okHandler(alert:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -248,11 +248,11 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SavingMoneyPlanning/ViewController/TotalResultViewController.swift"
-            timestampString = "592747104.5350291"
+            timestampString = "593151907.201957"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "92"
-            endingLineNumber = "92"
+            startingLineNumber = "112"
+            endingLineNumber = "112"
             landmarkName = "okHandler(alert:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -264,39 +264,7 @@
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SavingMoneyPlanning/ViewController/TotalResultViewController.swift"
-            timestampString = "592747104.535529"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "113"
-            endingLineNumber = "113"
-            landmarkName = "okHandler(alert:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SavingMoneyPlanning/ViewController/TotalResultViewController.swift"
-            timestampString = "592747104.535995"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
-            landmarkName = "okHandler(alert:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SavingMoneyPlanning/ViewController/TotalResultViewController.swift"
-            timestampString = "592747104.53678"
+            timestampString = "593151907.202536"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "133"
@@ -311,8 +279,40 @@
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
+            filePath = "SavingMoneyPlanning/ViewController/TotalResultViewController.swift"
+            timestampString = "593151907.203043"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "141"
+            endingLineNumber = "141"
+            landmarkName = "okHandler(alert:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SavingMoneyPlanning/ViewController/TotalResultViewController.swift"
+            timestampString = "593151907.2035429"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "153"
+            endingLineNumber = "153"
+            landmarkName = "okHandler(alert:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
             filePath = "SavingMoneyPlanning/ViewController/InputViewController.swift"
-            timestampString = "593095352.839175"
+            timestampString = "593151907.2040319"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "250"

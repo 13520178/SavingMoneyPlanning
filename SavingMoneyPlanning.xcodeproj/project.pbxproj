@@ -8,6 +8,7 @@
 
 /* Begin PBXBuildFile section */
 		188855EF2143FEC8000393EA /* Tools.swift in Sources */ = {isa = PBXBuildFile; fileRef = 188855EE2143FEC8000393EA /* Tools.swift */; };
+		1B09CE34235A9B000039EF00 /* PercentForPieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B09CE33235A9B000039EF00 /* PercentForPieChart.swift */; };
 		1B157C2922914DF100345E4B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1B157C2722914DF100345E4B /* Localizable.strings */; };
 		1B2F6A6621368B3100835C3A /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2F6A6521368B3100835C3A /* AlertController.swift */; };
 		1B3311E52147DFBC00506FE6 /* Average+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3311E32147DFBC00506FE6 /* Average+CoreDataClass.swift */; };
@@ -34,6 +35,7 @@
 
 /* Begin PBXFileReference section */
 		188855EE2143FEC8000393EA /* Tools.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Tools.swift; sourceTree = "<group>"; };
+		1B09CE33235A9B000039EF00 /* PercentForPieChart.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PercentForPieChart.swift; sourceTree = "<group>"; };
 		1B157C2822914DF100345E4B /* en */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = en; path = en.lproj/Localizable.strings; sourceTree = "<group>"; };
 		1B157C2B22914E1400345E4B /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/LaunchScreen.strings; sourceTree = "<group>"; };
 		1B157C2C22914E1400345E4B /* vi */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = vi; path = vi.lproj/Localizable.strings; sourceTree = "<group>"; };
@@ -106,6 +108,7 @@
 				1B50E7BE215627B900C03338 /* PerYearSavingMoney.swift */,
 				1B50E7BF215627B900C03338 /* SavingMoney.swift */,
 				1B7E728A2329E5BE00954405 /* CompoundInterestModel.swift */,
+				1B09CE33235A9B000039EF00 /* PercentForPieChart.swift */,
 			);
 			path = Model;
 			sourceTree = "<group>";
@@ -322,6 +325,7 @@
 				1B50E7C1215627BA00C03338 /* PerYearSavingMoney.swift in Sources */,
 				1B74A7EA21355A7D00FC7C40 /* PersitenceService.swift in Sources */,
 				188855EF2143FEC8000393EA /* Tools.swift in Sources */,
+				1B09CE34235A9B000039EF00 /* PercentForPieChart.swift in Sources */,
 				1BA95610212FF28300DB2419 /* AppDelegate.swift in Sources */,
 				1B74A7DF2135313700FC7C40 /* DetailViewController.swift in Sources */,
 			);
