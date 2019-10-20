@@ -11,6 +11,8 @@
 		1B09CE34235A9B000039EF00 /* PercentForPieChart.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B09CE33235A9B000039EF00 /* PercentForPieChart.swift */; };
 		1B157C2922914DF100345E4B /* Localizable.strings in Resources */ = {isa = PBXBuildFile; fileRef = 1B157C2722914DF100345E4B /* Localizable.strings */; };
 		1B2F6A6621368B3100835C3A /* AlertController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B2F6A6521368B3100835C3A /* AlertController.swift */; };
+		1B30AFDD235B3A04003E4197 /* HIstoryCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B30AFDC235B3A04003E4197 /* HIstoryCell.swift */; };
+		1B30AFDF235B3A31003E4197 /* HistoryViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B30AFDE235B3A31003E4197 /* HistoryViewController.swift */; };
 		1B3311E52147DFBC00506FE6 /* Average+CoreDataClass.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3311E32147DFBC00506FE6 /* Average+CoreDataClass.swift */; };
 		1B3311E62147DFBC00506FE6 /* Average+CoreDataProperties.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B3311E42147DFBC00506FE6 /* Average+CoreDataProperties.swift */; };
 		1B41CA902323A41C0034ED28 /* CompoundViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 1B41CA8F2323A41C0034ED28 /* CompoundViewController.swift */; };
@@ -43,6 +45,8 @@
 		1B2DB7C0235479B1004BF788 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/LaunchScreen.strings"; sourceTree = "<group>"; };
 		1B2DB7C1235479B1004BF788 /* zh-Hans */ = {isa = PBXFileReference; lastKnownFileType = text.plist.strings; name = "zh-Hans"; path = "zh-Hans.lproj/Localizable.strings"; sourceTree = "<group>"; };
 		1B2F6A6521368B3100835C3A /* AlertController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AlertController.swift; sourceTree = "<group>"; };
+		1B30AFDC235B3A04003E4197 /* HIstoryCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HIstoryCell.swift; sourceTree = "<group>"; };
+		1B30AFDE235B3A31003E4197 /* HistoryViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HistoryViewController.swift; sourceTree = "<group>"; };
 		1B3311E32147DFBC00506FE6 /* Average+CoreDataClass.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Average+CoreDataClass.swift"; sourceTree = "<group>"; };
 		1B3311E42147DFBC00506FE6 /* Average+CoreDataProperties.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "Average+CoreDataProperties.swift"; sourceTree = "<group>"; };
 		1B41CA8F2323A41C0034ED28 /* CompoundViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CompoundViewController.swift; sourceTree = "<group>"; };
@@ -120,6 +124,7 @@
 				1B561B2C213160B8005C4374 /* TotalResultViewController.swift */,
 				1B74A7DE2135313700FC7C40 /* DetailViewController.swift */,
 				1B41CA8F2323A41C0034ED28 /* CompoundViewController.swift */,
+				1B30AFDE235B3A31003E4197 /* HistoryViewController.swift */,
 			);
 			path = ViewController;
 			sourceTree = "<group>";
@@ -157,6 +162,7 @@
 				1B3311E32147DFBC00506FE6 /* Average+CoreDataClass.swift */,
 				1B3311E42147DFBC00506FE6 /* Average+CoreDataProperties.swift */,
 				1B74A7E02135371E00FC7C40 /* DetailTableViewCell.swift */,
+				1B30AFDC235B3A04003E4197 /* HIstoryCell.swift */,
 				1B74A7E921355A7D00FC7C40 /* PersitenceService.swift */,
 				1B2F6A6521368B3100835C3A /* AlertController.swift */,
 				1B2297C62132A93C002900B4 /* ViewController */,
@@ -315,6 +321,7 @@
 				1B2F6A6621368B3100835C3A /* AlertController.swift in Sources */,
 				1B74A7E12135371E00FC7C40 /* DetailTableViewCell.swift in Sources */,
 				1B3311E62147DFBC00506FE6 /* Average+CoreDataProperties.swift in Sources */,
+				1B30AFDF235B3A31003E4197 /* HistoryViewController.swift in Sources */,
 				1B3311E52147DFBC00506FE6 /* Average+CoreDataClass.swift in Sources */,
 				1B74A7E42135590A00FC7C40 /* SavingMoneyPlanning.xcdatamodeld in Sources */,
 				1B561B2D213160B8005C4374 /* TotalResultViewController.swift in Sources */,
@@ -330,6 +337,7 @@
 				1B09CE34235A9B000039EF00 /* PercentForPieChart.swift in Sources */,
 				1BA95610212FF28300DB2419 /* AppDelegate.swift in Sources */,
 				1B74A7DF2135313700FC7C40 /* DetailViewController.swift in Sources */,
+				1B30AFDD235B3A04003E4197 /* HIstoryCell.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};
