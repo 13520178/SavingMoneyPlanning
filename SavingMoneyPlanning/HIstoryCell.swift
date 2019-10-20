@@ -12,4 +12,14 @@ class HIstoryCell: UITableViewCell {
 
     @IBOutlet weak var shadowView: UIView!
     @IBOutlet weak var parrentView: UIView!
+    @IBOutlet weak var nameLabel: UILabel!
+    @IBOutlet weak var amountAvailableLabel: UILabel!
+    @IBOutlet weak var firstYearEarningLabel: UILabel!
+    
+    @IBOutlet weak var anualIncomeIncreaseLabel: UILabel!
+    
+    @IBOutlet weak var percentForSavingLabel: UILabel!
+    
+    @IBOutlet weak var interestLabel: UILabel!
+    @IBOutlet weak var yearsLabel: UILabel!
 }

@@ -45,5 +45,35 @@ class AlertController {
         }
         vc.present(alert, animated: true)
     }
+    
+    static func addNewListAlert(in vc: UIViewController, completion: @escaping ( _ name:String ,_ isSuccess:Bool)->Void) {
+        
+        let alert = UIAlertController(title: "Add new name", message: nil, preferredStyle: .alert)
+        
+        alert.addTextField { (nameTF) in
+            nameTF.autocapitalizationType = .sentences
+            nameTF.placeholder = String("Ex. New house")
+        }
+        
+        
+        let add = UIAlertAction(title: "Add", style: .default) { (_) in
+            guard let name = alert.textFields?.first?.text else {
+                completion("",false)
+                return
+            }
+            if  name == "" {
+                completion("",false)
+                
+                return
+            }
+            
+            completion(name,true)
+        }
+        let cancel = UIAlertAction(title: "Cancel", style: .cancel)
+        
+        alert.addAction(add)
+        alert.addAction(cancel)
+        vc.present(alert,animated: true)
+    }
 }
 

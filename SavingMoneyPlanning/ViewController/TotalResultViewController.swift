@@ -90,6 +90,26 @@ class TotalResultViewController: UIViewController {
        
     }
     
+    @IBAction func saveNewButtonPressed(_ sender: UIButton) {
+        AlertController.addNewListAlert(in: self) { (name, isSuccess) in
+            if isSuccess {
+                let saving = Saving(context: PersitenceService.context)
+                saving.name = name
+                saving.amountAvailable = self.caculate.amountAvailable
+                saving.firstYearEarning = self.caculate.moneySavingPerYear.firstYearEarning
+                saving.anualIncomeIncrease = self.caculate.moneySavingPerYear.annualIncomeIcreases
+                saving.isPercent = self.caculate.moneySavingPerYear.isPercent
+                saving.percentForSaving = self.caculate.moneySavingPerYear.percentOfIncomeForSaving
+                saving.interest = self.caculate.interest
+                saving.years = Int16(self.caculate.moneySavingPerYear.years)
+                saving.unit = self.caculate.currencyUnit
+                
+                PersitenceService.saveContext()
+            }
+        }
+    }
+    
+    
     func setupPieChart(depositValue:Double, interestValue:Double) {
         pieView.backgroundColor = #colorLiteral(red: 1.0, green: 1.0, blue: 1.0, alpha: 1.0)
         

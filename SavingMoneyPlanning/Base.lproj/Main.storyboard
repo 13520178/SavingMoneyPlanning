@@ -1301,6 +1301,9 @@
                                                         <userDefinedRuntimeAttributes>
                                                             <userDefinedRuntimeAttribute type="string" keyPath="layer.cornerRadius" value="10"/>
                                                         </userDefinedRuntimeAttributes>
+                                                        <connections>
+                                                            <action selector="saveNewButtonPressed:" destination="jZy-XN-bZ2" eventType="touchUpInside" id="OqF-xI-93g"/>
+                                                        </connections>
                                                     </button>
                                                     <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="2Qe-er-SdX">
                                                         <rect key="frame" x="206" y="0.0" width="198" height="30"/>
@@ -1699,9 +1702,9 @@
                                                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="86c-17-eaU">
                                                     <rect key="frame" x="11" y="12" width="392" height="210"/>
                                                     <subviews>
-                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mua nhà (VND) " textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTc-lJ-Cr4">
-                                                            <rect key="frame" x="8" y="12" width="138.33333333333334" height="48"/>
-                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="19"/>
+                                                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Mua nhà (VND) " textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="0" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="CTc-lJ-Cr4">
+                                                            <rect key="frame" x="8" y="12" width="376" height="48"/>
+                                                            <fontDescription key="fontDescription" type="system" weight="medium" pointSize="18"/>
                                                             <color key="textColor" red="0.2588235438" green="0.75686275960000005" blue="0.96862745289999996" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                                                             <nil key="highlightedColor"/>
                                                         </label>
@@ -1820,7 +1823,9 @@
                                                         <constraint firstItem="5bm-Ow-emu" firstAttribute="leading" secondItem="86c-17-eaU" secondAttribute="leading" constant="8" id="CN1-15-U53"/>
                                                         <constraint firstItem="CTc-lJ-Cr4" firstAttribute="leading" secondItem="86c-17-eaU" secondAttribute="leading" constant="8" id="Fqc-my-iv6"/>
                                                         <constraint firstAttribute="trailing" secondItem="n0G-eX-nVy" secondAttribute="trailing" constant="8" id="GYf-oo-dID"/>
+                                                        <constraint firstItem="n0G-eX-nVy" firstAttribute="top" secondItem="CTc-lJ-Cr4" secondAttribute="bottom" id="K4V-Dg-MQZ"/>
                                                         <constraint firstItem="CTc-lJ-Cr4" firstAttribute="top" secondItem="86c-17-eaU" secondAttribute="top" constant="12" id="U2I-6k-xoj"/>
+                                                        <constraint firstAttribute="trailing" secondItem="CTc-lJ-Cr4" secondAttribute="trailing" constant="8" id="Ueb-VS-vkk"/>
                                                         <constraint firstItem="n0G-eX-nVy" firstAttribute="leading" secondItem="86c-17-eaU" secondAttribute="leading" constant="8" id="d1C-9J-cjS"/>
                                                         <constraint firstItem="5bm-Ow-emu" firstAttribute="top" secondItem="n0G-eX-nVy" secondAttribute="bottom" constant="8" id="txM-nS-iAS"/>
                                                         <constraint firstAttribute="bottom" secondItem="5bm-Ow-emu" secondAttribute="bottom" constant="8" id="vDr-lI-EK6"/>
@@ -1840,8 +1845,15 @@
                                             </constraints>
                                         </tableViewCellContentView>
                                         <connections>
+                                            <outlet property="amountAvailableLabel" destination="bCd-i8-KuJ" id="B99-uw-3cV"/>
+                                            <outlet property="anualIncomeIncreaseLabel" destination="cKl-Ya-fTd" id="1kx-YA-tEC"/>
+                                            <outlet property="firstYearEarningLabel" destination="wfH-zS-bAf" id="rhR-9B-2Tc"/>
+                                            <outlet property="interestLabel" destination="S3h-bj-pNi" id="uDa-5e-Qac"/>
+                                            <outlet property="nameLabel" destination="CTc-lJ-Cr4" id="aTR-iW-1ng"/>
                                             <outlet property="parrentView" destination="86c-17-eaU" id="kXo-3Q-TYV"/>
+                                            <outlet property="percentForSavingLabel" destination="adC-5L-vT2" id="1BC-nU-NOo"/>
                                             <outlet property="shadowView" destination="E0N-Rl-eKi" id="egV-0M-X9N"/>
+                                            <outlet property="yearsLabel" destination="iM4-qM-u5E" id="7IW-f4-95C"/>
                                         </connections>
                                     </tableViewCell>
                                 </prototypes>
