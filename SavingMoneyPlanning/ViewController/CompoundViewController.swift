@@ -12,6 +12,7 @@ import GoogleMobileAds
 
 class CompoundViewController: UIViewController,GADBannerViewDelegate {
 
+    @IBOutlet weak var heightFromInputToResult: NSLayoutConstraint!
     @IBOutlet weak var bannerView: GADBannerView!
     @IBOutlet weak var resultView: UIView!
     
@@ -55,12 +56,38 @@ class CompoundViewController: UIViewController,GADBannerViewDelegate {
         
         
         bannerView.adSize = kGADAdSizeSmartBannerPortrait
-        bannerView.adUnitID = "ca-app-pub-9626752563546060/4427218069"
+        //bannerView.adUnitID = "ca-app-pub-9626752563546060/4427218069"
+        
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716" // ex
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         bannerView.delegate = self
         
+        compoundButton.titleLabel?.text = Tools.defaultCompoundPeriod
+        
+        principalTextfield.addTarget(self, action: #selector(principalTextFieldDidChange), for: .editingChanged)
+        
+        interestTextfield.addTarget(self, action: #selector(interestTextFieldDidChange), for: .editingChanged)
+        
        
+    }
+    
+    func adViewDidReceiveAd(_ bannerView: GADBannerView) {
+        UIView.animate(withDuration: 1, animations: {
+            self.heightFromInputToResult.constant = 380
+            
+        })
+    }
+    
+    
+    @objc func principalTextFieldDidChange(_ textField: UITextField) {
+        principalTextfield.text = Tools.fixCurrencyTextInTextfield(moneyStr: principalTextfield.text ?? "" )
+    }
+    
+    
+    
+    @objc func interestTextFieldDidChange(_ textField: UITextField) {
+        interestTextfield.text = Tools.fixCurrencyTextInTextfield(moneyStr: interestTextfield.text ?? "" )
     }
     
     func setUpUnpredictableToKeyboard() {
@@ -101,6 +128,9 @@ class CompoundViewController: UIViewController,GADBannerViewDelegate {
             AlertController.showAlert(inController: self, tilte: NSLocalizedString("Error", comment: "error"), message: NSLocalizedString("pleaseFill", comment: "Please Fill"))
             return
         }
+        
+        principal = Tools.getMoneyFromTextFieldToUsing(ftString: principal)
+        interest = Tools.getMoneyFromTextFieldToUsing(ftString: interest)
         
         principal = Tools.replaceDotOrComma(string: principal)
         interest = Tools.replaceDotOrComma(string: interest)

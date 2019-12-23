@@ -39,7 +39,7 @@
 "BcU-0z-nBj.normalTitle" = "9";
 
 /* Class = "UINavigationItem"; title = "Other formula"; ObjectID = "Bee-vQ-MtD"; */
-"Bee-vQ-MtD.title" = "Công thức khác";
+"Bee-vQ-MtD.title" = "Tiền tiết kiệm";
 
 /* Class = "UILabel"; text = "0"; ObjectID = "CNA-zu-2FG"; */
 "CNA-zu-2FG.text" = "0";
@@ -63,7 +63,7 @@
 "Evs-0R-aMm.title" = "Lãi suất kép";
 
 /* Class = "UITextField"; placeholder = "Ex. 50 000"; ObjectID = "FLq-Ji-3RA"; */
-"FLq-Ji-3RA.placeholder" = "Vd. 50 000";
+"FLq-Ji-3RA.placeholder" = "Vd. 50.000";
 
 /* Class = "UILabel"; text = "Total in the bank:  "; ObjectID = "Fe2-el-pbK"; */
 "Fe2-el-pbK.text" = "Trong ngân hàng:  ";
@@ -168,7 +168,7 @@
 "Z2T-tS-R9w.text" = "10000000000000";
 
 /* Class = "UITextField"; placeholder = "Ex. 100 000"; ObjectID = "Z5h-5z-gY2"; */
-"Z5h-5z-gY2.placeholder" = "Vd. 100 000 000";
+"Z5h-5z-gY2.placeholder" = "Vd. 100.000.000";
 
 /* Class = "UILabel"; text = "Interest (%)"; ObjectID = "ZNP-a7-duW"; */
 "ZNP-a7-duW.text" = "Lãi suất (%)";
@@ -183,7 +183,7 @@
 "bRl-R0-zXm.text" = "Label";
 
 /* Class = "UITextField"; placeholder = "Ex. 10 000"; ObjectID = "ekd-aL-9Tw"; */
-"ekd-aL-9Tw.placeholder" = "Vd. 1 000 000";
+"ekd-aL-9Tw.placeholder" = "Vd. 1.000.000";
 
 /* Class = "UISegmentedControl"; fXf-Kk-8Fa.segmentTitles[0] = "Percent"; ObjectID = "fXf-Kk-8Fa"; */
 "fXf-Kk-8Fa.segmentTitles[0]" = "Phần trăm";
@@ -213,7 +213,7 @@
 "lYW-2h-81v.text" = "Label";
 
 /* Class = "UITextField"; placeholder = "6.5"; ObjectID = "n25-fh-0SE"; */
-"n25-fh-0SE.placeholder" = "6.5";
+"n25-fh-0SE.placeholder" = "6,5";
 
 /* Class = "UIButton"; normalTitle = "7"; ObjectID = "nAu-lV-D34"; */
 "nAu-lV-D34.normalTitle" = "7";
@@ -228,7 +228,7 @@
 "pcF-da-m5l.text" = "%";
 
 /* Class = "UIButton"; normalTitle = "Weekly"; ObjectID = "pcH-w5-qSB"; */
-"pcH-w5-qSB.normalTitle" = "Hàng tuần";
+"pcH-w5-qSB.normalTitle" = "Hàng tháng";
 
 /* Class = "UITabBarItem"; title = "Calculator"; ObjectID = "qYc-qU-gBN"; */
 "qYc-qU-gBN.title" = "Tính toán";

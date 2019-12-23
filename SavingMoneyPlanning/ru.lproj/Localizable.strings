@@ -24,4 +24,6 @@
 "error" = "ошибка";
 "pleaseFillCorrect" = "Пожалуйста, заполните правильный формат";
 "putWrongPlace" = "Вы поставили «/» в неправильном месте";
+"defaultCompoundPeriod" = "ежемесячно";
+"country" = "Nga";
 

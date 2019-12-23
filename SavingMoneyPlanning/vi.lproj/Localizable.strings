@@ -24,3 +24,6 @@
 "error" = "Lỗi";
 "pleaseFillCorrect" = "Bạn chưa nhập đúng hệ số chuyển đổi";
 "putWrongPlace" = "Bạn đặt / sai vị trí";
+"defaultCompoundPeriod" = "Hàng tháng";
+"country" = "VN";
+

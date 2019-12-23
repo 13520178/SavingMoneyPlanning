@@ -24,4 +24,7 @@
 "error" = "ข้อผิดพลาด";
 "pleaseFillCorrect" = "กรุณากรอกข้อมูลให้ถูกต้อง";
 "putWrongPlace" = "คุณใส่ '/' ผิดตำแหน่ง";
+"defaultCompoundPeriod" = "รายเดือน";
+"country" = "Thai";
+
 

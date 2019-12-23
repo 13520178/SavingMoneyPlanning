@@ -173,7 +173,8 @@ class InputViewController: UIViewController, UITextFieldDelegate, GADBannerViewD
         navigationController?.navigationBar.isTranslucent = false
         
         bannerView.adSize = kGADAdSizeSmartBannerPortrait
-        bannerView.adUnitID = "ca-app-pub-9626752563546060/6460736189"
+        //bannerView.adUnitID = "ca-app-pub-9626752563546060/6460736189"
+        bannerView.adUnitID = "ca-app-pub-3940256099942544/2934735716" // ex
         bannerView.rootViewController = self
         bannerView.load(GADRequest())
         bannerView.delegate = self
@@ -188,6 +189,8 @@ class InputViewController: UIViewController, UITextFieldDelegate, GADBannerViewD
         viewSecond.layer.borderColor = #colorLiteral(red: 0.8039215803, green: 0.8039215803, blue: 0.8039215803, alpha: 1)
         
 
+        
+        
         
         if backFromTotal {
             currencyUnitTextField.text = caculate.currencyUnit
@@ -232,8 +235,30 @@ class InputViewController: UIViewController, UITextFieldDelegate, GADBannerViewD
             
         }catch {}
         
+        amountAvailableTextField.addTarget(self, action: #selector(amountAvailableTextFieldDidChange), for: .editingChanged)
+        firstYearEarningTextField.addTarget(self, action: #selector(firstYearEarningTextFieldDidChange), for: .editingChanged)
+        annualIncomeTextField.addTarget(self, action: #selector(annualIncomeTextFieldDidChange), for: .editingChanged)
+        percentageForSavingTextField.addTarget(self, action: #selector(percentageForSavingTextFieldDidChange), for: .editingChanged)
+        bankInterestTextField.addTarget(self, action: #selector(bankInterestTextFieldDidChange), for: .editingChanged)
 
     }
+    
+    @objc func amountAvailableTextFieldDidChange(_ textField: UITextField) {
+        amountAvailableTextField.text = Tools.fixCurrencyTextInTextfield(moneyStr: amountAvailableTextField.text ?? "" )
+    }
+    @objc func firstYearEarningTextFieldDidChange(_ textField: UITextField) {
+        firstYearEarningTextField.text = Tools.fixCurrencyTextInTextfield(moneyStr: firstYearEarningTextField.text ?? "" )
+    }
+    @objc func annualIncomeTextFieldDidChange(_ textField: UITextField) {
+        annualIncomeTextField.text = Tools.fixCurrencyTextInTextfield(moneyStr: annualIncomeTextField.text ?? "" )
+    }
+    @objc func percentageForSavingTextFieldDidChange(_ textField: UITextField) {
+        percentageForSavingTextField.text = Tools.fixCurrencyTextInTextfield(moneyStr: percentageForSavingTextField.text ?? "" )
+    }
+    @objc func bankInterestTextFieldDidChange(_ textField: UITextField) {
+        bankInterestTextField.text = Tools.fixCurrencyTextInTextfield(moneyStr: bankInterestTextField.text ?? "" )
+    }
+    
     
     @IBAction func caculateResult(_ sender: UIButton) {
         caculate = CaculateTheSavingMoney()
@@ -256,11 +281,19 @@ class InputViewController: UIViewController, UITextFieldDelegate, GADBannerViewD
         }
         
         
+        amountAvailable = Tools.getMoneyFromTextFieldToUsing(ftString: amountAvailable)
+        firstYearEarning = Tools.getMoneyFromTextFieldToUsing(ftString: firstYearEarning)
+        annualIncomeIcreases = Tools.getMoneyFromTextFieldToUsing(ftString: annualIncomeIcreases)
+        percentOfIncomeForSaving = Tools.getMoneyFromTextFieldToUsing(ftString: percentOfIncomeForSaving)
+        interest = Tools.getMoneyFromTextFieldToUsing(ftString: interest)
+        
+        amountAvailable = Tools.replaceDotOrComma(string: amountAvailable)
         firstYearEarning = Tools.replaceDotOrComma(string: firstYearEarning)
         annualIncomeIcreases = Tools.replaceDotOrComma(string: annualIncomeIcreases)
         percentOfIncomeForSaving = Tools.replaceDotOrComma(string: percentOfIncomeForSaving)
-        amountAvailable = Tools.replaceDotOrComma(string: amountAvailable)
         interest = Tools.replaceDotOrComma(string: interest)
+        
+        
         
         
         let firstYearEarningDouble:Double? = Double(Tools.replaceSpace(string: firstYearEarning))
@@ -319,13 +352,13 @@ class InputViewController: UIViewController, UITextFieldDelegate, GADBannerViewD
             average.number = percentOfIncomeForSavingDouble
             
             defaults.set(currencyUnitValue, forKey: "currencyUnitDefaults")
-            defaults.set(annualIncomeIcreasesDbouble, forKey: "anualIcreaseDefaults")
-            defaults.set(amountAvailableDouble, forKey: "amountAvailableDefaults")
-            defaults.set(interestDouble, forKey: "bankInterestDefaults")
-            defaults.set(firstYearEarningDouble, forKey: "firstYearEarningDefaults")
-            defaults.set(percentOfIncomeForSavingDouble, forKey: "percentForSavingDefaults")
+            defaults.set(annualIncomeTextField.text, forKey: "anualIcreaseDefaults")
+            defaults.set(amountAvailableTextField.text, forKey: "amountAvailableDefaults")
+            defaults.set(bankInterestTextField.text, forKey: "bankInterestDefaults")
+            defaults.set(firstYearEarningTextField.text, forKey: "firstYearEarningDefaults")
+            defaults.set(percentageForSavingTextField.text, forKey: "percentForSavingDefaults")
             defaults.set(caculate.moneySavingPerYear.isPercent, forKey: "percentOrNumberDefaults")
-            defaults.set(yearsInt, forKey: "yearDefaults")
+            defaults.set(yearsTextField.text, forKey: "yearDefaults")
 
             PersitenceService.saveContext()
             averages.append(average)
@@ -361,17 +394,19 @@ class InputViewController: UIViewController, UITextFieldDelegate, GADBannerViewD
 
         if defaults.integer(forKey: "yearDefaults") != 0 {
             currencyUnitTextField.text = defaults.string(forKey: "currencyUnitDefaults")
-            amountAvailableTextField.text = String(defaults.double(forKey: "amountAvailableDefaults"))
-            firstYearEarningTextField.text = String(defaults.double(forKey: "firstYearEarningDefaults"))
-            annualIncomeTextField.text = String(defaults.double(forKey: "anualIcreaseDefaults"))
-            percentageForSavingTextField.text = String(defaults.double(forKey: "percentForSavingDefaults"))
-            yearsTextField.text = String(defaults.integer(forKey: "yearDefaults"))
-            bankInterestTextField.text = String(defaults.double(forKey: "bankInterestDefaults"))
+            amountAvailableTextField.text = defaults.string(forKey: "amountAvailableDefaults")
+            firstYearEarningTextField.text = defaults.string(forKey: "firstYearEarningDefaults")
+            annualIncomeTextField.text = defaults.string(forKey: "anualIcreaseDefaults")
+            percentageForSavingTextField.text = defaults.string(forKey: "percentForSavingDefaults")
+            yearsTextField.text = defaults.string(forKey: "yearDefaults")
+            bankInterestTextField.text = defaults.string(forKey: "bankInterestDefaults")
             if defaults.bool(forKey: "percentOrNumberDefaults") {
                 percentOrNumSegment.selectedSegmentIndex = 0
             }else {
                 percentOrNumSegment.selectedSegmentIndex = 1
             }
+            
+            
         }
 
     }

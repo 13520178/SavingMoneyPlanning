@@ -24,4 +24,6 @@
 "error" = "Error";
 "pleaseFillCorrect" = "Please fill in the correct format";
 "putWrongPlace" = "You put '/' in the wrong place";
+"defaultCompoundPeriod" = "Monthly";
+"country" = "US";
 

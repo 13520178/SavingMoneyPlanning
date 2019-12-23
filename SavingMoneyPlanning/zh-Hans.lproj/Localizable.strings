@@ -24,4 +24,7 @@
 "error" = "错误";
 "pleaseFillCorrect" = "请用正确格式填写";
 "putWrongPlace" = "你把'/'放错地方了";
+"defaultCompoundPeriod" = "每月";
+"country" = "TQ";
+
 

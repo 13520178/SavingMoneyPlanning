@@ -61,5 +61,4 @@ class HistoryViewController: UIViewController,UITableViewDelegate,UITableViewDat
         
         return cell
     }
-    
 }

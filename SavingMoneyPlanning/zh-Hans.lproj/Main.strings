@@ -63,7 +63,7 @@
 "Evs-0R-aMm.title" = "存款";
 
 /* Class = "UITextField"; placeholder = "Ex. 50 000"; ObjectID = "FLq-Ji-3RA"; */
-"FLq-Ji-3RA.placeholder" = "Ex. 50 000";
+"FLq-Ji-3RA.placeholder" = "Ex. 50,000";
 
 /* Class = "UILabel"; text = "Total in the bank:  "; ObjectID = "Fe2-el-pbK"; */
 "Fe2-el-pbK.text" = "银行存款总额:";
@@ -168,7 +168,7 @@
 "Z2T-tS-R9w.text" = "10000000000000";
 
 /* Class = "UITextField"; placeholder = "Ex. 100 000"; ObjectID = "Z5h-5z-gY2"; */
-"Z5h-5z-gY2.placeholder" = "Ex. 100 000";
+"Z5h-5z-gY2.placeholder" = "Ex. 100,000";
 
 /* Class = "UILabel"; text = "Interest (%)"; ObjectID = "ZNP-a7-duW"; */
 "ZNP-a7-duW.text" = "利息率 (%)";
@@ -183,7 +183,7 @@
 "bRl-R0-zXm.text" = "Label";
 
 /* Class = "UITextField"; placeholder = "Ex. 10 000"; ObjectID = "ekd-aL-9Tw"; */
-"ekd-aL-9Tw.placeholder" = "Ex. 10 000";
+"ekd-aL-9Tw.placeholder" = "Ex. 10,000";
 
 /* Class = "UISegmentedControl"; fXf-Kk-8Fa.segmentTitles[0] = "Percent"; ObjectID = "fXf-Kk-8Fa"; */
 "fXf-Kk-8Fa.segmentTitles[0]" = "百分比";
@@ -228,7 +228,7 @@
 "pcF-da-m5l.text" = "%";
 
 /* Class = "UIButton"; normalTitle = "Weekly"; ObjectID = "pcH-w5-qSB"; */
-"pcH-w5-qSB.normalTitle" = "每周";
+"pcH-w5-qSB.normalTitle" = "每月";
 
 /* Class = "UITabBarItem"; title = "Calculator"; ObjectID = "qYc-qU-gBN"; */
 "qYc-qU-gBN.title" = "计算器";
